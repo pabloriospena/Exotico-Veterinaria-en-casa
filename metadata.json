@@ -1,0 +1,6 @@
+{
+  "name": "Exótico Vet - Veterinaria a Domicilio Oriente Antioqueño",
+  "description": "Atención veterinaria especializada a domicilio para conejos, aves, cuyes, erizos y mini pigs en La Ceja, Rionegro, El Retiro y Oriente Antioqueño.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
