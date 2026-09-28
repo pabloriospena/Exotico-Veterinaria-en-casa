@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 import { SERVICES_LIST, ServiceInfo } from '../data/veterinaryData';
 
-interface ServicesSectionProps {
-  onOpenAppointmentModal: () => void;
-}
-
-export const ServicesSection: React.FC<ServicesSectionProps> = ({
-  onOpenAppointmentModal,
-}) => {
+export const ServicesSection: React.FC = () => {
   const [selectedService, setSelectedService] = useState<ServiceInfo | null>(null);
 
   return (
@@ -62,7 +56,7 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
             rel="noopener noreferrer"
           >
             <span className="material-symbols-outlined text-[20px]">chat</span>
-            <span>Consultar Catálogo de Servicios en WhatsApp</span>
+            <span>Hablar por WhatsApp</span>
           </a>
         </div>
       </div>
@@ -108,15 +102,15 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
             </div>
 
             <div className="pt-2 flex gap-2">
-              <button
-                onClick={() => {
-                  setSelectedService(null);
-                  onOpenAppointmentModal();
-                }}
-                className="flex-1 py-3 bg-[#003622] text-white font-bold text-xs rounded-xl hover:bg-[#134e35] transition-colors"
+              <a
+                href={`https://wa.me/c/573052417854?text=${encodeURIComponent(`Hola, quisiera consultar sobre el servicio: ${selectedService.title}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 py-3 bg-[#7c2800] text-white font-bold text-xs rounded-xl hover:bg-[#571900] transition-colors text-center flex items-center justify-center gap-1.5"
               >
-                Solicitar Servicio
-              </button>
+                <span className="material-symbols-outlined text-[18px]">chat</span>
+                <span>Hablar por WhatsApp</span>
+              </a>
               <button
                 onClick={() => setSelectedService(null)}
                 className="px-4 py-3 bg-gray-100 text-gray-700 font-semibold text-xs rounded-xl hover:bg-gray-200"

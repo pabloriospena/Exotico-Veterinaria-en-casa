@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
               nest_eco_leaf
             </span>
             <span className="text-lg font-bold text-[#003622]">
-              Exótico Vet Oriente Antioqueño
+              Exótico Oriente Antioqueño
             </span>
           </div>
           <p className="text-xs md:text-sm text-[#404943] max-w-xl leading-relaxed">
@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
             <span className="material-symbols-outlined text-[#003622] text-[18px]">
               verified_user
             </span>
-            <span>Registro Profesional COMVEZCOL · Especialista MVZ</span>
+            <span>Medicina Aves y Animales Exóticos · MV. GRAND MASTER</span>
           </div>
         </div>
 
@@ -49,13 +49,13 @@ export const Footer: React.FC = () => {
               rel="noopener noreferrer"
               className="hover:text-[#003622] transition-colors"
             >
-              Catálogo WhatsApp
+              WhatsApp
             </a>
             <span className="hover:text-[#003622] cursor-pointer">Términos del Servicio</span>
             <span className="hover:text-[#003622] cursor-pointer">Política de Privacidad</span>
           </div>
           <span className="text-[11px] text-gray-500">
-            © {new Date().getFullYear()} Exótico Vet Oriente Antioqueño. Todos los derechos reservados.
+            © {new Date().getFullYear()} Exótico Oriente Antioqueño. Todos los derechos reservados.
           </span>
         </div>
       </div>

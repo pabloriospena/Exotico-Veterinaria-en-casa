@@ -12,10 +12,10 @@ export const FloatingWhatsAppBar: React.FC = () => {
         >
           <div className="flex items-center gap-2.5">
             <span className="material-symbols-outlined text-[22px] group-hover:scale-110 transition-transform">
-              support_agent
+              chat
             </span>
             <span className="text-xs sm:text-sm font-bold tracking-wide">
-              Hablar por WhatsApp (Catálogo)
+              Hablar por WhatsApp
             </span>
           </div>
           <span className="material-symbols-outlined text-[20px]">arrow_forward</span>

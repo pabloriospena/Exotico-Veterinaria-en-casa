@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import { PATIENT_STORIES, PatientStory } from '../data/veterinaryData';
 
 interface TestimonialsSectionProps {
-  onOpenAppointmentModal: () => void;
+  onOpenReviewsModal: () => void;
 }
 
 export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
-  onOpenAppointmentModal,
+  onOpenReviewsModal,
 }) => {
   const [filter, setFilter] = useState<string>('todos');
 
@@ -20,25 +20,22 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   });
 
   return (
-    <section className="flex flex-col px-4 md:px-8 py-8 gap-6 max-w-5xl mx-auto">
+    <section id="reseñas" className="flex flex-col px-4 md:px-8 py-8 gap-6 max-w-5xl mx-auto">
       {/* Vet Bio Card */}
       <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 p-6 rounded-3xl bg-white shadow-sm border border-gray-100">
         <div className="relative shrink-0">
           <img
             className="w-24 h-24 rounded-full object-cover shadow-sm border-2 border-[#b4f0cd]"
-            alt="Dra. Médica Veterinaria Especialista"
+            alt="Exótico"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeFqQFJSzlyMTwjvw60uY9-6Sgu9WMneBvdOTQRt61aoKadxgYgLBgFrUBHEo2JR-c0XSACLsDva5wf_h0jrGvBvZyyhOMYHYe_34WbbYa_zjC2ZXvTNIbV2u2HoNzEwt3BpA6F0zlchFfAyZeEuGcPVXaANwFib__nr9Ga_e44BdanAPu_VZiQ5llUBOYF1R1iM9vcLJm57MwGCDEVonJ2r5HUdH06_xXmyXrzYkksIhDPU5SaM-EpA"
           />
-          <span className="absolute bottom-0 right-0 w-7 h-7 rounded-full bg-[#003622] flex items-center justify-center text-white">
-            <span className="material-symbols-outlined text-[16px]">verified</span>
-          </span>
         </div>
 
         <div className="flex flex-col text-center sm:text-left gap-1 flex-1">
           <span className="text-[11px] font-bold text-[#7c2800] uppercase tracking-wider">Sobre Mí</span>
-          <h3 className="text-lg font-bold text-[#003622]">Dra. Médica Veterinaria Especialista</h3>
+          <h3 className="text-lg font-bold text-[#003622]">Medicina Aves y Animales Exóticos</h3>
           <span className="text-xs font-semibold text-[#556158]">
-            Fauna Silvestre & Animales No Convencionales
+            MV. GRAND MASTER
           </span>
           <p className="text-xs text-[#404943] pt-1 leading-relaxed">
             Viviendo el sueño de llevar salud y respeto a cada rincón del Oriente Antioqueño. Menos clínica blanca fría, más aire puro y tranquilidad para tu animalito.
@@ -47,13 +44,23 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
       </div>
 
       {/* Patient Stories Header */}
-      <div className="flex flex-col gap-1 pt-2">
-        <span className="text-xs uppercase tracking-widest text-[#003622] font-bold">
-          Pacientes Célebres
-        </span>
-        <h2 className="text-2xl md:text-3xl font-bold text-[#003622]">
-          Casos Reales con Final Feliz
-        </h2>
+      <div className="flex items-center justify-between">
+        <div className="flex flex-col gap-1">
+          <span className="text-xs uppercase tracking-widest text-[#003622] font-bold">
+            Reseñas & Opiniones
+          </span>
+          <h2 className="text-2xl md:text-3xl font-bold text-[#003622]">
+            Casos Reales con Final Feliz
+          </h2>
+        </div>
+
+        <button
+          onClick={onOpenReviewsModal}
+          className="hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-gray-200 text-[#003622] font-bold text-xs shadow-sm hover:bg-gray-50 transition-colors"
+        >
+          <span className="text-amber-500 font-bold">4.9 ★</span>
+          <span>Ver Reseñas Google</span>
+        </button>
       </div>
 
       {/* Filter Buttons */}
@@ -110,7 +117,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
 
             <div className="pt-2 border-t border-gray-100 flex items-center justify-between text-[11px] text-[#134e35]">
               <span className="font-semibold">Tratamiento: {st.treatment}</span>
-              <span className="material-symbols-outlined text-[16px]">verified</span>
+              <span className="text-amber-500 font-bold">5.0 ★</span>
             </div>
           </div>
         ))}

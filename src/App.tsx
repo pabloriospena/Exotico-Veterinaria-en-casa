@@ -14,24 +14,16 @@ import { FaqSection } from './components/FaqSection';
 import { Footer } from './components/Footer';
 import { FloatingWhatsAppBar } from './components/FloatingWhatsAppBar';
 import { BottomNavBar } from './components/BottomNavBar';
-import { AppointmentModal } from './components/AppointmentModal';
-import { SymptomCheckerModal } from './components/SymptomCheckerModal';
+import { GoogleReviewsModal } from './components/GoogleReviewsModal';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState<string>('inicio');
-  const [isAppointmentOpen, setIsAppointmentOpen] = useState<boolean>(false);
-  const [isSymptomCheckerOpen, setIsSymptomCheckerOpen] = useState<boolean>(false);
-  const [selectedSpeciesForAppointment, setSelectedSpeciesForAppointment] = useState<string>('');
-
-  const handleOpenAppointmentModal = (species: string = '') => {
-    setSelectedSpeciesForAppointment(species);
-    setIsAppointmentOpen(true);
-  };
+  const [isReviewsOpen, setIsReviewsOpen] = useState<boolean>(false);
 
   // Scroll spy to update active navigation item
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['inicio', 'especies', 'servicios', 'cobertura', 'faq'];
+      const sections = ['inicio', 'especies', 'servicios', 'cobertura', 'reseñas', 'faq'];
       const scrollPosition = window.scrollY + 200;
 
       for (const sectionId of sections) {
@@ -55,33 +47,25 @@ export default function App() {
     <div className="bg-[#f9f9f9] text-[#1a1c1c] font-['Outfit',sans-serif] min-h-screen flex flex-col relative selection:bg-[#134e35] selection:text-white">
       {/* Header Bar */}
       <Header
-        onOpenAppointmentModal={() => handleOpenAppointmentModal()}
-        onOpenSymptomChecker={() => setIsSymptomCheckerOpen(true)}
         activeSection={activeSection}
         setActiveSection={setActiveSection}
+        onOpenReviewsModal={() => setIsReviewsOpen(true)}
       />
 
       {/* Main Content Sections */}
       <main className="flex flex-col relative w-full pt-20 pb-12">
         <HeroSection
-          onOpenAppointmentModal={() => handleOpenAppointmentModal()}
-          onOpenSymptomChecker={() => setIsSymptomCheckerOpen(true)}
+          onOpenReviewsModal={() => setIsReviewsOpen(true)}
         />
 
-        <SpeciesSection
-          onOpenAppointmentModal={(species) => handleOpenAppointmentModal(species)}
-        />
+        <SpeciesSection />
 
-        <ServicesSection
-          onOpenAppointmentModal={() => handleOpenAppointmentModal()}
-        />
+        <ServicesSection />
 
-        <CoverageSection
-          onOpenAppointmentModal={() => handleOpenAppointmentModal()}
-        />
+        <CoverageSection />
 
         <TestimonialsSection
-          onOpenAppointmentModal={() => handleOpenAppointmentModal()}
+          onOpenReviewsModal={() => setIsReviewsOpen(true)}
         />
 
         <FaqSection />
@@ -96,21 +80,13 @@ export default function App() {
       <BottomNavBar
         activeSection={activeSection}
         setActiveSection={setActiveSection}
-        onOpenSymptomChecker={() => setIsSymptomCheckerOpen(true)}
+        onOpenReviewsModal={() => setIsReviewsOpen(true)}
       />
 
-      {/* Interactive Booking & WhatsApp Generator Modal */}
-      <AppointmentModal
-        isOpen={isAppointmentOpen}
-        onClose={() => setIsAppointmentOpen(false)}
-        preselectedSpecies={selectedSpeciesForAppointment}
-      />
-
-      {/* Interactive Pet Symptom Evaluator & Triaje Modal */}
-      <SymptomCheckerModal
-        isOpen={isSymptomCheckerOpen}
-        onClose={() => setIsSymptomCheckerOpen(false)}
-        onOpenAppointmentModal={(species) => handleOpenAppointmentModal(species)}
+      {/* Google Reviews Modal */}
+      <GoogleReviewsModal
+        isOpen={isReviewsOpen}
+        onClose={() => setIsReviewsOpen(false)}
       />
     </div>
   );

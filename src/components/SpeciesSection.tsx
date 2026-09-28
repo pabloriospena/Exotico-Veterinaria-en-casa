@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 import { SPECIES_LIST, SpeciesInfo } from '../data/veterinaryData';
 
-interface SpeciesSectionProps {
-  onOpenAppointmentModal: (species?: string) => void;
-}
-
-export const SpeciesSection: React.FC<SpeciesSectionProps> = ({
-  onOpenAppointmentModal,
-}) => {
+export const SpeciesSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('todos');
 
   const filteredSpecies = SPECIES_LIST.filter(
@@ -100,13 +94,16 @@ export const SpeciesSection: React.FC<SpeciesSectionProps> = ({
               </div>
             </div>
 
-            <button
-              onClick={() => onOpenAppointmentModal(sp.name)}
-              className="w-full py-2.5 px-4 rounded-xl bg-[#d9e6da] hover:bg-[#003622] hover:text-white text-[#003622] font-bold text-xs transition-colors flex items-center justify-center gap-1.5 mt-2"
+            {/* Direct WhatsApp Action Button */}
+            <a
+              href={`https://wa.me/c/573052417854?text=${encodeURIComponent(`Hola, quisiera consultar para mi ${sp.name}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full py-3 px-4 rounded-xl bg-[#7c2800] hover:bg-[#571900] text-white font-bold text-xs transition-colors flex items-center justify-center gap-1.5 mt-2 shadow-sm"
             >
-              <span className="material-symbols-outlined text-[16px]">calendar_month</span>
-              <span>Agendar para {sp.name.split('&')[0]}</span>
-            </button>
+              <span className="material-symbols-outlined text-[18px]">chat</span>
+              <span>Consultar por WhatsApp</span>
+            </a>
           </div>
         ))}
       </div>

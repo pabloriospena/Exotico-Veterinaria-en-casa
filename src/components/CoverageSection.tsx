@@ -1,13 +1,7 @@
 import React, { useState } from 'react';
 import { MUNICIPALITIES, MunicipalityInfo } from '../data/veterinaryData';
 
-interface CoverageSectionProps {
-  onOpenAppointmentModal: () => void;
-}
-
-export const CoverageSection: React.FC<CoverageSectionProps> = ({
-  onOpenAppointmentModal,
-}) => {
+export const CoverageSection: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedMunicipality, setSelectedMunicipality] = useState<MunicipalityInfo | null>(
     MUNICIPALITIES[0]
@@ -41,13 +35,19 @@ export const CoverageSection: React.FC<CoverageSectionProps> = ({
             <span className="material-symbols-outlined text-[24px]">pin_drop</span>
           </div>
           <div>
-            <h3 className="text-sm font-bold">Ruta Activa Oriente Antioqueño Cercano</h3>
-            <span className="text-xs text-[#b4f0cd]">La Ceja · Rionegro · El Retiro</span>
+            <h3 className="text-sm font-bold">Atención en Oriente Antioqueño</h3>
+            <span className="text-xs text-[#b4f0cd]">La Ceja · Rionegro · El Retiro · Marinilla y más</span>
           </div>
         </div>
-        <span className="text-xs bg-[#134e35] text-[#b4f0cd] px-3 py-1.5 rounded-full border border-[#b4f0cd]/30 font-semibold">
-          Llegada a finca sin estrés
-        </span>
+        <a
+          href="https://wa.me/c/573052417854"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs bg-[#7c2800] hover:bg-[#571900] text-white px-4 py-2 rounded-full font-bold flex items-center gap-1.5 transition-colors shadow-sm"
+        >
+          <span className="material-symbols-outlined text-[16px]">chat</span>
+          <span>Consultar por WhatsApp</span>
+        </a>
       </div>
 
       {/* Vereda / Municipality Search Filter */}
@@ -117,14 +117,16 @@ export const CoverageSection: React.FC<CoverageSectionProps> = ({
 
           <div className="flex items-center justify-between text-xs pt-2 border-t border-gray-100">
             <span className="text-gray-600">
-              ⏱️ Tiempo estimado de llegada en ruta: <strong>{selectedMunicipality.estimatedArrival}</strong>
+              ⏱️ Tiempo estimado de llegada: <strong>{selectedMunicipality.estimatedArrival}</strong>
             </span>
-            <button
-              onClick={onOpenAppointmentModal}
-              className="text-[#7c2800] hover:underline font-bold text-xs"
+            <a
+              href={`https://wa.me/c/573052417854?text=${encodeURIComponent(`Hola, vivo en ${selectedMunicipality.name} y quisiera consultar disponibilidad`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#7c2800] font-bold text-xs hover:underline flex items-center gap-1"
             >
               Consultar Disponibilidad →
-            </button>
+            </a>
           </div>
         </div>
       )}
@@ -135,7 +137,7 @@ export const CoverageSection: React.FC<CoverageSectionProps> = ({
           help
         </span>
         <p className="text-xs text-[#404943] leading-relaxed">
-          ¿Tu vereda o sector queda más alejado o fuera del mapa principal? Escríbenos por WhatsApp para coordinar día de ruta especial o agendar visita a finca.
+          ¿Tu vereda o sector queda más alejado o fuera del mapa principal? Escríbenos por WhatsApp para coordinar día de visita especial a finca.
         </p>
       </div>
     </section>

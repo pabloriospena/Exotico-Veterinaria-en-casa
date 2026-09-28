@@ -3,17 +3,17 @@ import React from 'react';
 interface BottomNavBarProps {
   activeSection: string;
   setActiveSection: (section: string) => void;
-  onOpenSymptomChecker: () => void;
+  onOpenReviewsModal: () => void;
 }
 
 export const BottomNavBar: React.FC<BottomNavBarProps> = ({
   activeSection,
   setActiveSection,
-  onOpenSymptomChecker,
+  onOpenReviewsModal,
 }) => {
   const handleNavClick = (id: string) => {
-    if (id === 'sintomas') {
-      onOpenSymptomChecker();
+    if (id === 'reseñas-modal') {
+      onOpenReviewsModal();
       return;
     }
     setActiveSection(id);
@@ -27,8 +27,8 @@ export const BottomNavBar: React.FC<BottomNavBarProps> = ({
     { id: 'inicio', label: 'Inicio', icon: 'home' },
     { id: 'especies', label: 'Especies', icon: 'pets' },
     { id: 'servicios', label: 'Servicios', icon: 'medical_services' },
-    { id: 'sintomas', label: 'Triaje', icon: 'health_and_safety' },
     { id: 'cobertura', label: 'Cobertura', icon: 'distance' },
+    { id: 'reseñas-modal', label: 'Reseñas', icon: 'star' },
   ];
 
   return (
