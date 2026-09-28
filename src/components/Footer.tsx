@@ -25,12 +25,18 @@ export const Footer: React.FC = () => {
             </span>
             <span>Lunes a Sábado: 8:00 AM - 6:00 PM (Visitas Programadas)</span>
           </div>
-          <div className="flex items-center gap-2 p-3 bg-white/70 rounded-xl">
-            <span className="material-symbols-outlined text-[#003622] text-[18px]">
-              location_city
+          <a
+            href="https://maps.app.goo.gl/prjgBchypa6JDMqG7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 p-3 bg-white/70 hover:bg-white rounded-xl transition-colors group cursor-pointer border border-transparent hover:border-gray-200"
+            title="Ver ubicación en Google Maps"
+          >
+            <span className="material-symbols-outlined text-red-600 text-[18px]">
+              location_on
             </span>
-            <span>La Ceja, Rionegro y Oriente Antioqueño, Colombia</span>
-          </div>
+            <span className="group-hover:text-[#003622] group-hover:underline font-medium">La Ceja, Rionegro y Oriente Antioqueño, Colombia</span>
+          </a>
           <div className="flex items-center gap-2 p-3 bg-white/70 rounded-xl">
             <span className="material-symbols-outlined text-[#003622] text-[18px]">
               verified_user
@@ -51,6 +57,15 @@ export const Footer: React.FC = () => {
             >
               <span className="material-symbols-outlined text-[16px]">chat</span>
               <span>WhatsApp</span>
+            </a>
+            <a
+              href="https://maps.app.goo.gl/prjgBchypa6JDMqG7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#003622] transition-colors flex items-center gap-1 text-[#7c2800] font-bold"
+            >
+              <span className="material-symbols-outlined text-[16px]">map</span>
+              <span>Google Maps</span>
             </a>
             <a
               href="https://www.instagram.com/exotico.vet/"

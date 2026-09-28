@@ -45,13 +45,25 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
           </h2>
         </div>
 
-        <button
-          onClick={onOpenReviewsModal}
-          className="hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-gray-200 text-[#003622] font-bold text-xs shadow-sm hover:bg-gray-50 transition-colors"
-        >
-          <span className="text-amber-500 font-bold">{rating.toFixed(1)} ★</span>
-          <span>Ver Reseñas Google</span>
-        </button>
+        <div className="hidden sm:flex items-center gap-2">
+          <button
+            onClick={onOpenReviewsModal}
+            className="flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-gray-200 text-[#003622] font-bold text-xs shadow-sm hover:bg-gray-50 transition-colors"
+          >
+            <span className="text-amber-500 font-bold">{rating.toFixed(1)} ★</span>
+            <span>Ver Reseñas</span>
+          </button>
+          <a
+            href="https://maps.app.goo.gl/prjgBchypa6JDMqG7"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 px-3.5 py-2.5 rounded-2xl bg-[#003622] text-white font-bold text-xs shadow-sm hover:bg-[#134e35] transition-colors"
+            title="Abrir en Google Maps"
+          >
+            <span className="material-symbols-outlined text-red-400 text-[16px]">location_on</span>
+            <span>Ficha Google Maps</span>
+          </a>
+        </div>
       </div>
 
       {/* Filter Buttons */}

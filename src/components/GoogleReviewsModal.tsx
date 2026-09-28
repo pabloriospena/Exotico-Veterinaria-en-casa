@@ -322,14 +322,26 @@ export const GoogleReviewsModal: React.FC<GoogleReviewsModalProps> = ({
             </div>
           </div>
 
-          <a
-            href="https://wa.me/c/573052417854"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 rounded-xl bg-[#003622] text-white text-xs font-bold hover:bg-[#134e35] transition-colors"
-          >
-            Escribir por WhatsApp
-          </a>
+          <div className="flex items-center gap-2">
+            <a
+              href="https://maps.app.goo.gl/prjgBchypa6JDMqG7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-2 rounded-xl bg-white border border-gray-300 text-[#003622] text-xs font-bold hover:bg-gray-100 transition-colors flex items-center gap-1 shadow-sm"
+            >
+              <span className="material-symbols-outlined text-red-600 text-[16px]">location_on</span>
+              <span className="hidden sm:inline">Perfil</span> Google Maps
+            </a>
+            <a
+              href="https://wa.me/c/573052417854"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3.5 py-2 rounded-xl bg-[#003622] text-white text-xs font-bold hover:bg-[#134e35] transition-colors flex items-center gap-1"
+            >
+              <span className="material-symbols-outlined text-[16px]">chat</span>
+              <span>WhatsApp</span>
+            </a>
+          </div>
         </div>
 
         {/* Reviews Feed */}
