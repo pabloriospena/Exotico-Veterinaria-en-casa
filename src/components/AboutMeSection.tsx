@@ -15,9 +15,12 @@ export const AboutMeSection: React.FC = () => {
             <div className="relative">
               <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl relative bg-[#002a1a] flex items-center justify-center">
                 <img
-                  src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80"
+                  src="/sobre-mi.jpg"
                   alt="Dra. María del Mar Mejía Cano - Médica Veterinaria de Exóticos"
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80";
+                  }}
                 />
               </div>
               <div className="absolute -bottom-2 -right-2 bg-[#7c2800] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg border-2 border-white flex items-center gap-1">

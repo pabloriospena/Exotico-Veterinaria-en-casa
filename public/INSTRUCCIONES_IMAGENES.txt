@@ -1,0 +1,18 @@
+========================================================================
+INSTRUCCIONES PARA COLOCAR TUS IMÁGENES EN EL PROYECTO
+========================================================================
+
+Para que el sitio web muestre exactamente tus fotos locales:
+
+1. Guarda la foto principal de la portada (Hero) dentro de la carpeta "public" con el nombre:
+   hero.jpg
+
+2. Guarda la foto de perfil de la Dra. María del Mar (Sobre Mí) dentro de la carpeta "public" con el nombre:
+   sobre-mi.jpg
+
+Ubicación final de los archivos:
+- /public/hero.jpg
+- /public/sobre-mi.jpg
+
+Nota: Si tus fotos tienen extensión .png o .webp, puedes guardarlas como .jpg o avisarnos para ajustar el código a la extensión exacta.
+========================================================================

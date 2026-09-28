@@ -69,7 +69,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
         <img
           className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-700"
           alt="Exótico a domicilio en La Ceja Oriente Antioqueño"
-          src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfv7ZnuUoRJePDKiMPFgISZ4IDX0z1DhfTbRtqKVsjkRkcHBpWcrcohOy1JfBVr2AlQlRSxkTNy7RfDGyWG47nOpDEoKMII9SvT8g8zNB4UAHfXStrOZo6tMZ_3TsyR9ghuHAZi83iQ4gh5CsCx2PjQFw6cxXRLFbXHd2wS0i41yOSGQ1DGOHts4GsUHL2Hat-cZy2skBu7juGVKx0HBynFx-a_J7Lk8Fh5Q6HEsdSLwYHn5dLamxQxQ"
+          src="/hero.jpg"
+          onError={(e) => {
+            e.currentTarget.src = "https://lh3.googleusercontent.com/aida-public/AB6AXuDfv7ZnuUoRJePDKiMPFgISZ4IDX0z1DhfTbRtqKVsjkRkcHBpWcrcohOy1JfBVr2AlQlRSxkTNy7RfDGyWG47nOpDEoKMII9SvT8g8zNB4UAHfXStrOZo6tMZ_3TsyR9ghuHAZi83iQ4gh5CsCx2PjQFw6cxXRLFbXHd2wS0i41yOSGQ1DGOHts4GsUHL2Hat-cZy2skBu7juGVKx0HBynFx-a_J7Lk8Fh5Q6HEsdSLwYHn5dLamxQxQ";
+          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#003622]/90 via-[#003622]/20 to-transparent"></div>
         <div className="absolute bottom-4 left-4 right-4 flex flex-col sm:flex-row items-start sm:items-center justify-between text-white gap-2">
