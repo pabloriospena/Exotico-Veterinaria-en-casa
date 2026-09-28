@@ -41,7 +41,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
             Reseñas & Opiniones
           </span>
           <h2 className="text-2xl md:text-3xl font-bold text-[#003622]">
-            Casos Reales con Final Feliz
+            Casos Reales
           </h2>
         </div>
 
