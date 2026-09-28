@@ -58,7 +58,11 @@ export const SpeciesSection: React.FC = () => {
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
                   <span className="w-10 h-10 rounded-full bg-[#d9e6da] flex items-center justify-center text-[#003622]">
-                    <span className="material-symbols-outlined text-[22px]">{sp.icon}</span>
+                    {sp.icon === 'pig' ? (
+                      <span className="text-xl" role="img" aria-label="Minipig">🐷</span>
+                    ) : (
+                      <span className="material-symbols-outlined text-[22px]">{sp.icon}</span>
+                    )}
                   </span>
                   <div>
                     <h3 className="text-base font-bold text-[#003622] leading-snug">{sp.name}</h3>

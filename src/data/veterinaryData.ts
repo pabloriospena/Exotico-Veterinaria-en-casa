@@ -147,7 +147,7 @@ export const SPECIES_LIST: SpeciesInfo[] = [
     name: 'Exóticos',
     subtitle: 'Erizos Africanos (como Alma), Hurones y Fauna No Convencional',
     category: 'exoticos',
-    icon: 'pest_control',
+    icon: 'pets',
     badge: 'Cuidados Especializados de Especie',
     image: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=800&q=80',
     description: 'Atención médica y dermatológica para erizos africanos, hurones y otros pequeños mamíferos exóticos. Evaluación de piel y púas, ácaros, nutrición específica y revisión cardiopulmonar.',
@@ -170,7 +170,7 @@ export const SPECIES_LIST: SpeciesInfo[] = [
     name: 'Minipigs',
     subtitle: 'Mini Pigs de Finca & Hogar (como Toreto)',
     category: 'minipigs',
-    icon: 'sound_detection_dog_barking',
+    icon: 'pig',
     badge: 'Pedicura & Conducta en Corral',
     image: 'https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=800&q=80',
     description: 'Atención especializada para cerdos enanos en fincas y casas campestres. Recorte técnico de pezuñas con Dremel y refuerzo positivo en su propio corral sin contención violenta ni sedación innecesaria.',
@@ -367,7 +367,7 @@ export const PATIENT_STORIES: PatientStory[] = [
     petName: 'Alma la eriza',
     ownerLocation: 'El Retiro, Antioquia',
     speciesTag: 'Eriza Africana',
-    icon: 'pest_control',
+    icon: 'pets',
     testimonial: 'Chequeo dermatológico completo para descartar ácaros y control de peso en El Retiro con una delicadeza única. Cero estrés para ella y consejos clave de calefacción para el clima frío de nuestra zona.',
     treatment: 'Tratamiento antiparasitario cutáneo y termorregulación'
   },
@@ -376,7 +376,7 @@ export const PATIENT_STORIES: PatientStory[] = [
     petName: 'Toreto el mini pig',
     ownerLocation: 'Marinilla, Antioquia',
     speciesTag: 'Mini Pig',
-    icon: 'sound_detection_dog_barking',
+    icon: 'agriculture',
     testimonial: 'Recorte de pezuñas y plan antiparasitario con muchísima paciencia y refuerzo positivo en nuestra finca. Ningún otro veterinario se había tomado el tiempo de entender su conducta sin asustarlo.',
     treatment: 'Pedicura técnica con Dremel, desparasitación e inspección física'
   }

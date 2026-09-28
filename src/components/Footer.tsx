@@ -42,17 +42,32 @@ export const Footer: React.FC = () => {
         <div className="h-[1px] w-full bg-gray-300 my-2"></div>
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-[#404943]">
-          <div className="flex flex-wrap gap-4 font-medium">
+          <div className="flex flex-wrap gap-4 font-medium items-center">
             <a
               href="https://wa.me/c/573052417854"
               target="_blank"
               rel="noopener noreferrer"
+              className="hover:text-[#003622] transition-colors flex items-center gap-1"
+            >
+              <span className="material-symbols-outlined text-[16px]">chat</span>
+              <span>WhatsApp</span>
+            </a>
+            <a
+              href="https://www.instagram.com/exotico.vet/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-[#003622] transition-colors"
             >
-              WhatsApp
+              Instagram (@exotico.vet)
             </a>
-            <span className="hover:text-[#003622] cursor-pointer">Términos del Servicio</span>
-            <span className="hover:text-[#003622] cursor-pointer">Política de Privacidad</span>
+            <a
+              href="https://www.tiktok.com/@exotico.vet"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#003622] transition-colors"
+            >
+              TikTok (@exotico.vet)
+            </a>
           </div>
           <span className="text-[11px] text-gray-500">
             © {new Date().getFullYear()} Exótico Oriente Antioqueño. Todos los derechos reservados.

@@ -15,7 +15,7 @@ export const Header: React.FC<HeaderProps> = ({
   const navItems = [
     { id: 'inicio', label: 'Inicio', icon: 'home' },
     { id: 'sobre-mi', label: 'Sobre Mí', icon: 'person' },
-    { id: 'especies', label: 'Especies', icon: 'pets' },
+    { id: 'especies', label: 'Especies', icon: 'cruelty_free' },
     { id: 'servicios', label: 'Servicios', icon: 'medical_services' },
     { id: 'cobertura', label: 'Cobertura', icon: 'map' },
     { id: 'reseñas', label: 'Reseñas', icon: 'star' },
@@ -34,26 +34,35 @@ export const Header: React.FC<HeaderProps> = ({
   return (
     <header className="fixed top-0 w-full z-50 pt-safe bg-[#f9f9f9]/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(19,78,53,0.06)] border-b border-[#c0c9c1]/20">
       <div className="h-16 px-4 md:px-8 flex items-center justify-between gap-3 max-w-6xl mx-auto">
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-3">
           <button
             onClick={() => setDrawerOpen(!drawerOpen)}
             aria-expanded={drawerOpen}
             aria-label="Abrir menú de navegación"
-            className="w-11 h-11 flex items-center justify-center rounded-full text-[#003622] hover:bg-[#d9e6da]/60 transition-colors"
+            className="w-10 h-10 flex items-center justify-center rounded-full text-[#003622] hover:bg-[#d9e6da]/60 transition-colors"
           >
             <span className="material-symbols-outlined text-[24px]">
               {drawerOpen ? 'close' : 'menu'}
             </span>
           </button>
           
-          <div className="flex flex-col cursor-pointer" onClick={() => handleNavClick('inicio')}>
-            <span className="text-[11px] font-semibold text-[#5b675e] tracking-wider uppercase flex items-center gap-1">
-              <span className="w-2 h-2 rounded-full bg-[#134e35]"></span>
-              Exótico
-            </span>
-            <h1 className="text-[18px] font-bold text-[#003622] tracking-tight leading-none">
-              Oriente Antioqueño
-            </h1>
+          <div
+            className="flex items-center gap-2.5 cursor-pointer group"
+            onClick={() => handleNavClick('inicio')}
+          >
+            <img
+              alt="Logo Exótico - Veterinaria en casa"
+              className="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover shadow-[0_2px_10px_-2px_rgba(19,78,53,0.3)] border-2 border-[#b4f0cd] group-hover:scale-105 transition-transform"
+              src="https://lh3.googleusercontent.com/aida/AEtjO1UWKwwNLIPxSgfzH1AGEUd-pmMgnTKV650mOutXR_qC7O9gH7bFre5W-RWGKX1BvIqFfpYlxiXAJUacZKGBovwBexsgvoTEktKucQw_GPHr6OHYhjActatK3YtVrDTLDkUAI7ThpCxAKvy7mtLhACgh7DItLs7Okcjst1MVF8aCJuzAY7QU5nsjIslgk6-JcGc3TslIGxg40nkTRZWRnzAKBZvk8porwPssDbAQTvgbwS9chAkAmqWNbu0GWdL4KuwpQQ07WOvKEA"
+            />
+            <div className="flex flex-col">
+              <span className="text-[11px] font-bold text-[#134e35] tracking-wider uppercase flex items-center gap-1">
+                Exótico
+              </span>
+              <h1 className="text-[16px] md:text-[18px] font-black text-[#003622] tracking-tight leading-none">
+                Oriente Antioqueño
+              </h1>
+            </div>
           </div>
         </div>
 
@@ -79,29 +88,14 @@ export const Header: React.FC<HeaderProps> = ({
           {/* WhatsApp Direct Action */}
           <a
             aria-label="Contacto directo WhatsApp"
-            className="w-11 h-11 flex items-center justify-center rounded-full bg-[#d9e6da] text-[#134e35] hover:bg-[#003622] hover:text-white transition-colors relative"
+            className="px-3.5 py-2 rounded-full bg-[#003622] hover:bg-[#134e35] text-white font-bold text-xs transition-all shadow-md flex items-center gap-1.5"
             href="https://wa.me/c/573052417854"
             target="_blank"
             rel="noopener noreferrer"
             title="Escribir por WhatsApp"
           >
-            <span className="material-symbols-outlined text-[20px]">chat</span>
-            <span className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-[#7c2800] rounded-full border-2 border-white animate-pulse"></span>
-          </a>
-
-          {/* Profile Picture WITHOUT checkmark badge */}
-          <a
-            href="https://wa.me/c/573052417854"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="relative"
-            title="Hablar por WhatsApp"
-          >
-            <img
-              alt="Exótico"
-              className="w-9 h-9 rounded-full object-cover shadow-[0_2px_8px_-2px_rgba(19,78,53,0.25)] border-2 border-[#b4f0cd]"
-              src="https://lh3.googleusercontent.com/aida/AEtjO1UWKwwNLIPxSgfzH1AGEUd-pmMgnTKV650mOutXR_qC7O9gH7bFre5W-RWGKX1BvIqFfpYlxiXAJUacZKGBovwBexsgvoTEktKucQw_GPHr6OHYhjActatK3YtVrDTLDkUAI7ThpCxAKvy7mtLhACgh7DItLs7Okcjst1MVF8aCJuzAY7QU5nsjIslgk6-JcGc3TslIGxg40nkTRZWRnzAKBZvk8porwPssDbAQTvgbwS9chAkAmqWNbu0GWdL4KuwpQQ07WOvKEA"
-            />
+            <span className="material-symbols-outlined text-[18px]">chat</span>
+            <span className="hidden sm:inline">WhatsApp</span>
           </a>
         </div>
       </div>
