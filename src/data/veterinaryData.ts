@@ -2,7 +2,7 @@ export interface SpeciesInfo {
   id: string;
   name: string;
   subtitle: string;
-  category: 'pequeños-mamiferos' | 'roedores' | 'aves-compania' | 'aves-finca' | 'exoticos';
+  category: 'pequeños-mamiferos' | 'roedores' | 'aves-compania' | 'aves-finca' | 'exoticos' | 'minipigs';
   icon: string;
   image: string;
   badge: string;
@@ -92,7 +92,7 @@ export const SPECIES_LIST: SpeciesInfo[] = [
       'Higiene perineal y desobstrucción de sacos en cuyes',
       'Corte y alineación técnica molar/incisiva',
       'Suplementación clínica de Vitamina C y fluidoterapia',
-      'Evaluación ecográfica de vejiga con SonoBook 8'
+      'Evaluación clínica de vejiga y tracto urinario'
     ],
     careTip: 'Los cobayos (cuyes) no sintetizan vitamina C por sí mismos. Necesitan aporte diario en su dieta fresca o suplementación recomendada por el especialista.'
   },
@@ -143,27 +143,50 @@ export const SPECIES_LIST: SpeciesInfo[] = [
     careTip: 'En patos y gallinas, la humedad constante en los corrales favorece bacterias en las patas. Un suelo seco con virita o pasto previene bumblefoot doloroso.'
   },
   {
-    id: 'exoticos-minipigs',
-    name: 'Exóticos & Minipigs',
-    subtitle: 'Minipigs (como Toreto), Erizos Africanos (como Alma) y Hurones',
+    id: 'exoticos',
+    name: 'Exóticos',
+    subtitle: 'Erizos Africanos (como Alma), Hurones y Fauna No Convencional',
     category: 'exoticos',
-    icon: 'sound_detection_dog_barking',
-    badge: 'Atención Especializada sin Sedación',
+    icon: 'pest_control',
+    badge: 'Cuidados Especializados de Especie',
     image: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=800&q=80',
-    description: 'Manejo respetuoso para especies no convencionales. Recorte técnico de pezuñas en minipigs con refuerzo positivo, control dermatológico en erizos y nutrición de hurones.',
+    description: 'Atención médica y dermatológica para erizos africanos, hurones y otros pequeños mamíferos exóticos. Evaluación de piel y púas, ácaros, nutrición específica y revisión cardiopulmonar.',
     commonSymptoms: [
-      'Pezuñas sobrecrecidas que causan cojera en minipigs',
-      'Pérdida de púas, costras u orejas deshilachadas (erizos)',
+      'Pérdida excesiva de púas, costras o resequedad (erizos)',
       'Soplos cardíacos, decaimiento o diarreas (hurones)',
-      'Obesidad o problemas de comportamiento'
+      'Apatía, falta de apetito o bultos cutáneos',
+      'Orejas deshilachadas o rascado intenso'
+    ],
+    procedures: [
+      'Raspado cutáneo e identificación de ácaros bajo microscopio',
+      'Examen clínico especializado de erizos y hurones',
+      'Planes antiparasitarios y nutrición adaptada',
+      'Asesoría de temperatura y habitáculo'
+    ],
+    careTip: 'Los erizos africanos no toleran las bajas temperaturas. En el clima frío del Oriente Antioqueño requieren placa térmica o calefacción constante para no entrar en hibernación peligrosa.'
+  },
+  {
+    id: 'minipigs',
+    name: 'Minipigs',
+    subtitle: 'Mini Pigs de Finca & Hogar (como Toreto)',
+    category: 'minipigs',
+    icon: 'sound_detection_dog_barking',
+    badge: 'Pedicura & Conducta en Corral',
+    image: 'https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=800&q=80',
+    description: 'Atención especializada para cerdos enanos en fincas y casas campestres. Recorte técnico de pezuñas con Dremel y refuerzo positivo en su propio corral sin contención violenta ni sedación innecesaria.',
+    commonSymptoms: [
+      'Pezuñas sobrecrecidas o deformes que causan dolor/cojera',
+      'Sobrepeso o rigidez articular al levantarse',
+      'Problemas de piel, parásitos externos o rasquido',
+      'Cambios de conducta o agresividad por malestar'
     ],
     procedures: [
       'Pedicura técnica con Dremel para minipigs en su corral',
-      'Raspado de piel e identificación de ácaros en erizos',
-      'Planes antiparasitarios y de vacunación específica',
-      'Termorregulación y recomendaciones de habitáculo'
+      'Planes desparasitantes y control sanitario',
+      'Examen físico general e inspección articular',
+      'Asesoría de etología y refuerzo positivo'
     ],
-    careTip: 'Los erizos africanos no toleran las bajas temperaturas. En el clima frío del Oriente Antioqueño requieren placa térmica o calefacción para no entrar en hibernación peligrosa.'
+    careTip: 'El sobrecrecimiento de pezuñas en minipigs afecta la pisada y genera problemas articulares en la columna. Mantener el arreglo periódico evita cojeras permanentes.'
   }
 ];
 
@@ -183,18 +206,18 @@ export const SERVICES_LIST: ServiceInfo[] = [
     recommendedFor: 'Revisión anual, nuevos integrantes o cambios de comportamiento.'
   },
   {
-    id: 'ecografia-portatil',
-    title: 'Ecografía Portátil SonoBook 8',
-    shortDesc: 'Exploración abdominal y reproductiva in situ sin estrés ni traslados.',
-    fullDesc: 'Contamos con ecógrafo portátil de alta resolución SonoBook 8 equipado con sondas microconvexas ideales para conejos, cuyes, aves y animales pequeños.',
-    icon: 'monitor_heart',
+    id: 'sueroterapia-homeopatica',
+    title: 'Sueroterapia Homeopática',
+    shortDesc: 'Fluidoterapia biorreguladora e hidratación especializada in situ para recuperación profunda.',
+    fullDesc: 'Aplicación de sueros y soluciones de rehidratación enriquecidas con medicamentos homeopáticos biorreguladores. Promueve la desintoxicación, estimula el sistema inmune, alivia la inflamación y favorece la rápida recuperación en conejos, aves, cuyes y exóticos sin sobrecargar sus órganos.',
+    icon: 'water_drop',
     highlights: [
-      'Diagnóstico de estasis digestiva y cuerpos extraños',
-      'Detección de retención de huevos o masas reproductivas',
-      'Evaluación renal, hepática y vejiga (cálculos en cuyes)',
-      'Entrega de informe ecográfico en video e imágenes HD'
+      'Rehidratación in situ sin estrés de hospitalización',
+      'Medicamentos homeopáticos biorreguladores sin efectos secundarios',
+      'Estimulación del sistema inmunológico y drenaje toxémico',
+      'Soporte vital en estasis digestiva, decaimiento e infecciones'
     ],
-    recommendedFor: 'Dolor abdominal, sospecha de cálculos, distensión o chequeo gestacional.'
+    recommendedFor: 'Mascotas deshidratadas, inapetentes, en recuperación o con procesos crónicos.'
   },
   {
     id: 'odontologia-aviar-roedor',
@@ -344,7 +367,7 @@ export const PATIENT_STORIES: PatientStory[] = [
     petName: 'Alma la eriza',
     ownerLocation: 'El Retiro, Antioquia',
     speciesTag: 'Eriza Africana',
-    icon: 'sound_detection_dog_barking',
+    icon: 'pest_control',
     testimonial: 'Chequeo dermatológico completo para descartar ácaros y control de peso en El Retiro con una delicadeza única. Cero estrés para ella y consejos clave de calefacción para el clima frío de nuestra zona.',
     treatment: 'Tratamiento antiparasitario cutáneo y termorregulación'
   },
