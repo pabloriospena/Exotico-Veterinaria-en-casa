@@ -18,7 +18,7 @@ export const SpeciesSection: React.FC = () => {
           Especies que Atendemos en Casa & Finca
         </h2>
         <p className="text-xs md:text-sm text-[#404943]">
-          Abordaje empático y adaptado a la etología de cada especie en su hábitat cotidiano en La Ceja, Rionegro y Oriente Antioqueño.
+          Abordaje empático y adaptado a la etología de cada especie en su hábitat cotidiano en La Ceja, Rionegro y Oriente Antioqueño cercano.
         </p>
       </div>
 
@@ -33,11 +33,10 @@ export const SpeciesSection: React.FC = () => {
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
-              activeTab === tab.id
-                ? 'bg-[#003622] text-white shadow-sm'
-                : 'bg-[#d9e6da]/60 text-[#003622] hover:bg-[#d9e6da]'
-            }`}
+            className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${activeTab === tab.id
+              ? 'bg-[#003622] text-white shadow-sm'
+              : 'bg-[#d9e6da]/60 text-[#003622] hover:bg-[#d9e6da]'
+              }`}
           >
             {tab.label}
           </button>

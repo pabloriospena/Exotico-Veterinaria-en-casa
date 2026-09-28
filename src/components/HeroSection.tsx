@@ -20,7 +20,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       {/* Main Headings */}
       <div className="flex flex-col gap-2">
         <h1 className="text-2xl md:text-4xl font-bold text-[#003622] tracking-tight leading-tight">
-          Veterinaria de exóticos y mascotas no convencionales a domicilio en La Ceja y Oriente Antioqueño. Sin jaulas, sin estrés, en su propio entorno.
+          Veterinaria de exóticos y mascotas no convencionales a domicilio en La Ceja y Oriente Antioqueño. Sin estrés, en su propio entorno.
         </h1>
         <p className="text-sm md:text-base text-[#404943] leading-relaxed max-w-3xl">
           Sabemos que ellos no te van a decir que les duele. Los animales no convencionales ocultan el dolor por instinto: revisar a tiempo evita sufrimiento silencioso.
