@@ -31,71 +31,191 @@ const apiKey = import.meta.env.GOOGLE_PLACES_API_KEY || (typeof process !== 'und
 const placeId = import.meta.env.GOOGLE_PLACE_ID || (typeof process !== 'undefined' ? process.env.GOOGLE_PLACE_ID : '') || import.meta.env.VITE_GOOGLE_PLACE_ID || defaultPlaceId;
 
 let reviews: Review[] = [];
-let overallRating: number = 4.9;
-let totalReviewsCount: number = 120;
+let overallRating: number = 5.0;
+let totalReviewsCount: number = 56;
 let fetchError: string | null = null;
 
-// Reseñas de respaldo en caso de que aún no se configuren las claves de entorno
+// Reseñas reales extraídas de tu perfil oficial de Google Maps
 const FALLBACK_REVIEWS: Review[] = [
   {
-    author_name: 'Carolina Montoya',
+    author_name: 'Daniela Gonzalez',
     profile_photo_url: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80',
     rating: 5,
-    relative_time_description: 'Hace 2 semanas',
-    text: 'Excelente atención a domicilio. Mi cobayo Punky dejó de comer heno de la nada y estaba apático. La doctora vino hasta nuestra casa en La Ceja, le hizo un chequeo super completo, le arregló sus molares con mucha paciencia. Esa misma noche volvió a comer heno!'
+    relative_time_description: 'Hace 2 meses',
+    text: 'Súper recomendada! La doctora María del Mar vino a casa para la primera consulta de todas mis gallinas y la experiencia fue buena. Es una profesional muy amable, diligente y con un trato tan cuidadoso que mis gallinas estuvieron tranquilas y a gusto durante toda la revisión. Además, se tomó el tiempo de enseñarnos y darnos excelentes recomendaciones para su cuidado. Muchas gracias por tu gran labor!!'
   },
   {
-    author_name: 'Mateo Osorio',
+    author_name: 'Juan Pablo Martinez Bohorquez',
     profile_photo_url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
     rating: 5,
-    relative_time_description: 'Hace 1 mes',
-    text: 'Increíble encontrar en el Oriente Antioqueño a alguien tan capacitado en aves. Nuestro pato Ramón tuvo un accidente menor cerca del estanque y en vez de someterlo al estrés de llevarlo en guacal a una clínica, lo atendieron acá en la finca. Muy profesional.'
+    relative_time_description: 'Hace 2 meses',
+    text: 'He encontrado en "Exótico - Veterinaria Mascotas Exóticas" a las personas idóneas en las cuales puedo depositar la vida de mis animales de granja: la población de gallinas, conejos, patos y perros. No solo valoramos la pronta atención, sino que su conocimiento y calidez humana marcan toda la diferencia.'
   },
   {
-    author_name: 'Valeria Zuluaga',
+    author_name: 'Helen Guadalupe Ramirez Ciro',
     profile_photo_url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
     rating: 5,
+    relative_time_description: 'Hace 2 meses',
+    text: 'Una experiencia maravillosa para mí y mi hámster, ¡una calidad humana inmensa y un amor por los animales muy notorio! Es una veterinaria asombrosa, muy paciente y con una forma de ser muy tierna aparte de que su manera de explicar es muy fácil.'
+  },
+  {
+    author_name: 'Juliana Valencia',
+    profile_photo_url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 2 meses',
+    text: 'Nuestra experiencia con la doc, como le decimos de cariño, ha sido hermosa y muy acertada. Es una profesional en todo el ámbito, es cariñosa con nuestras mascotas, empática, tiene experiencia, una comunicación muy clara y nos ha guiado en todo momento.'
+  },
+  {
+    author_name: 'Director Cyber War',
+    profile_photo_url: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 3 meses',
+    text: '¡Absolutamente increíble! ¡La doctora veterinaria María es un regalo de los dioses! Su profesionalismo, atención al detalle y conocimiento médico de nuestro conejo familiar Charlie. Precisión quirúrgica al más alto nivel.'
+  },
+  {
+    author_name: 'Nataly Bustamante',
+    profile_photo_url: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 6 meses',
+    text: 'Recurrimos a la doctora María del Mar porque una de nuestras conejitas recibió una herida grave. La herida era bastante profunda y de mucha dificultad, sin embargo, su intervención médica y cuidados la salvaron por completo.'
+  },
+  {
+    author_name: 'Jenny Molano Pineda',
+    profile_photo_url: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 5 meses',
+    text: 'Me encanta la atención y paciencia con la que revisó a mi conejita, me parece muy buena la asesoría y el acompañamiento para hacer seguimiento y resolver dudas durante todo el proceso. El tratamiento es muy completo.'
+  },
+  {
+    author_name: 'Jeniffer Ocerin',
+    profile_photo_url: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 2 meses',
+    text: 'Una experiencia excelente. Es muy difícil encontrar veterinarios con experiencia en aves de corral y animales exóticos, y este equipo superó todas mis expectativas. Atendieron a mis gallinas en casa con muchísimo profesionalismo y dedicación.'
+  },
+  {
+    author_name: 'Yurany López Orozco',
+    profile_photo_url: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 6 meses',
+    text: 'Quiero expresar mi agradecimiento a la veterinaria María Del Mar por el amor, la paciencia y el cuidado con el que atendió a Milú. Su profesionalismo y cariño por los animales se nota en cada detalle; hoy Milú está contenta comiendo y brincando por toda la casa.'
+  },
+  {
+    author_name: 'Mary Luz García',
+    profile_photo_url: 'https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
     relative_time_description: 'Hace 3 semanas',
-    text: 'Atención 10/10 para animales no convencionales. Atendieron a mi eriza Alma para control dermatológico y corte de uñas. El trato fue sumamente delicado, sin forzarla ni asustarla. Nos explicó todo sobre calefacción para el clima frío de El Retiro.'
+    text: 'La doctora trató muy bien a mi erizo, fue muy clara en el diagnóstico como en el tratamiento y todas las indicaciones. Es una persona que se ve que tiene mucho conocimiento con este tipo de animalitos.'
+  },
+  {
+    author_name: 'Samantha',
+    profile_photo_url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 2 meses',
+    text: 'Esta veterinaria es excelente y súper recomendable. Me ha ayudado muchísimo con mis mascotas cada vez que lo he necesitado. Me alegra mucho que todavía existan personas con un amor tan grande por los animalitos 🫶🏽.'
+  },
+  {
+    author_name: 'Sofía Carmona Ceballos',
+    profile_photo_url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 4 meses',
+    text: 'La doctora es muy amable, brinda un servicio de calidad, y es muy buena explicando lo que debemos hacer como cuidadores para el bienestar de nuestras mascotas. Desde que la encontré, solo con ella encargo la salud y bienestar de mi coneja 🤍🫧.'
+  },
+  {
+    author_name: 'María M. Orcasita Caballero',
+    profile_photo_url: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 2 meses',
+    text: 'Ella es la mejor, siempre me atiende muy bien a mi Yoyi y me enseña cómo mejorar los cuidados.'
+  },
+  {
+    author_name: 'Isabel Medina',
+    profile_photo_url: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 3 meses',
+    text: '¡Les recomiendo mucho a Exótico! La Dra. María del Mar es excelente, muy acertada en sus diagnósticos y tratamientos, tiene respuesta rápida y buena disponibilidad. Aparte es muy amable; ha atendido a mis patos y siempre nos ha ido muy bien.'
+  },
+  {
+    author_name: 'Erika Patiño',
+    profile_photo_url: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 3 semanas',
+    text: 'Muy buen servicio y la veterinaria muy tierna con las mascotas. La atención domiciliaria fue súper cómoda y profesional para todos.'
+  },
+  {
+    author_name: 'Jorge Aguirre C.',
+    profile_photo_url: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace un año',
+    text: 'Cuando mi conejito Koffy se sintió mal, contacté a la doctora María del Mar quien vino prontamente y, con toda la calma del caso, lo examinó con esa delicadeza y amor que la caracteriza; recabó toda la información de sus síntomas e historia médica.'
+  },
+  {
+    author_name: 'Sebastian Arenas Ocampo',
+    profile_photo_url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 3 meses',
+    text: 'Una muy buena atención, disposición y ayuda profesional, junto a una muy linda actitud de parte de la veterinaria y la auxiliar.'
+  },
+  {
+    author_name: 'Dayana Rosales',
+    profile_photo_url: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 2 meses',
+    text: 'La mejor doctora: paciente, dispuesta, humana, dedicada, comprometida y atenta todo el tiempo a sus pacientes. Siempre disponible, nos guía y explica con claridad. Esperamos siempre seguir contando con su ayuda.'
+  },
+  {
+    author_name: 'M G',
+    profile_photo_url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 3 meses',
+    text: 'La doc María es lo mejor... delicada, dedicada, te entrega su tiempo y su conocimiento. Excelente persona y profesional. 🐇'
+  },
+  {
+    author_name: 'Paula Pulgarin',
+    profile_photo_url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 8 meses',
+    text: 'Excelente servicio, profesional y cálido con nuestras mascotas. Nuestro conejín fue el más consentido, tuvimos un diagnóstico y tratamiento acertado. ¡Mil gracias!'
   }
 ];
 
 if (apiKey && placeId) {
   try {
-    // Intento 1: Places API (New v1)
-    const newApiUrl = `https://places.googleapis.com/v1/places/${placeId}?languageCode=es`;
-    const newApiResponse = await fetch(newApiUrl, {
-      headers: {
-        'X-Goog-Api-Key': apiKey,
-        'X-Goog-FieldMask': 'id,displayName,rating,userRatingCount,reviews',
-      },
-    });
-
-    if (newApiResponse.ok) {
-      const data = await newApiResponse.json();
-      if (data && data.reviews && data.reviews.length > 0) {
-        overallRating = data.rating || 5.0;
-        totalReviewsCount = data.userRatingCount || data.reviews.length;
-        reviews = data.reviews.map((r: any) => ({
-          author_name: r.authorAttribution?.displayName || 'Cliente de Google',
-          profile_photo_url: r.authorAttribution?.photoUri || 'https://lh3.googleusercontent.com/a/default-user',
-          rating: r.rating || 5,
-          relative_time_description: r.relativePublishTimeDescription || 'Hace un tiempo',
-          text: r.text?.text || r.originalText?.text || '',
-        }));
+    // Endpoint primario: Google Places Details API (placeDetails)
+    const placeDetailsUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${encodeURIComponent(placeId)}&fields=name,rating,user_ratings_total,reviews&language=es&key=${encodeURIComponent(apiKey)}`;
+    const response = await fetch(placeDetailsUrl);
+    
+    if (response.ok) {
+      const data: PlaceDetailsResponse = await response.json();
+      if (data.status === 'OK' && data.result && data.result.reviews) {
+        overallRating = data.result.rating || 5.0;
+        totalReviewsCount = data.result.user_ratings_total || data.result.reviews.length;
+        reviews = data.result.reviews;
       }
     }
 
-    // Intento 2: Legacy Places Details API por place_id
+    // Endpoint secundario: Places API (New v1) si la primera API no retorna reseñas
     if (reviews.length === 0) {
-      const legacyUrl = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,user_ratings_total,reviews&language=es&key=${apiKey}`;
-      const legacyResponse = await fetch(legacyUrl);
-      if (legacyResponse.ok) {
-        const legacyData: PlaceDetailsResponse = await legacyResponse.json();
-        if (legacyData.status === 'OK' && legacyData.result && legacyData.result.reviews) {
-          overallRating = legacyData.result.rating || 5.0;
-          totalReviewsCount = legacyData.result.user_ratings_total || legacyData.result.reviews.length;
-          reviews = legacyData.result.reviews;
+      const newApiUrl = `https://places.googleapis.com/v1/places/${encodeURIComponent(placeId)}?languageCode=es`;
+      const newApiResponse = await fetch(newApiUrl, {
+        headers: {
+          'X-Goog-Api-Key': apiKey,
+          'X-Goog-FieldMask': 'id,displayName,rating,userRatingCount,reviews',
+        },
+      });
+
+      if (newApiResponse.ok) {
+        const data = await newApiResponse.json();
+        if (data && data.reviews && data.reviews.length > 0) {
+          overallRating = data.rating || 5.0;
+          totalReviewsCount = data.userRatingCount || data.reviews.length;
+          reviews = data.reviews.map((r: any) => ({
+            author_name: r.authorAttribution?.displayName || 'Cliente de Google',
+            profile_photo_url: r.authorAttribution?.photoUri || 'https://lh3.googleusercontent.com/a/default-user',
+            rating: r.rating || 5,
+            relative_time_description: r.relativePublishTimeDescription || 'Hace un tiempo',
+            text: r.text?.text || r.originalText?.text || '',
+          }));
         }
       }
     }
