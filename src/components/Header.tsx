@@ -14,10 +14,11 @@ export const Header: React.FC<HeaderProps> = ({
 
   const navItems = [
     { id: 'inicio', label: 'Inicio', icon: 'home' },
+    { id: 'sobre-mi', label: 'Sobre Mí', icon: 'person' },
     { id: 'especies', label: 'Especies', icon: 'pets' },
     { id: 'servicios', label: 'Servicios', icon: 'medical_services' },
     { id: 'cobertura', label: 'Cobertura', icon: 'map' },
-    { id: 'reseñas', label: 'Reseñas Google', icon: 'star' },
+    { id: 'reseñas', label: 'Reseñas', icon: 'star' },
     { id: 'faq', label: 'FAQ', icon: 'help' },
   ];
 

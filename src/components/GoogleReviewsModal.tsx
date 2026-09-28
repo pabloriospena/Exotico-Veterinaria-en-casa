@@ -15,105 +15,6 @@ interface GoogleReview {
 export const REAL_GOOGLE_REVIEWS: GoogleReview[] = [
   {
     id: 'rev-1',
-    author: 'Daniela Gonzalez',
-    location: 'Oriente Antioqueño',
-    pet: 'Gallinas de Corral',
-    rating: 5,
-    date: 'Hace 2 meses',
-    text: 'Súper recomendada! La doctora María del Mar vino a casa para la primera consulta de todas mis gallinas y la experiencia fue buena. Es una profesional muy amable, diligente y con un trato tan cuidadoso que mis gallinas estuvieron tranquilas y a gusto durante toda la revisión. Además, se tomó el tiempo de enseñarnos y darnos excelentes recomendaciones para su cuidado. Muchas gracias por tu gran labor!!',
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80',
-    verified: true
-  },
-  {
-    id: 'rev-2',
-    author: 'Juan Pablo Martinez Bohorquez',
-    location: 'Local Guide',
-    pet: 'Gallinas, Conejos, Patos & Perros',
-    rating: 5,
-    date: 'Hace 2 meses',
-    text: 'He encontrado en "Exótico - Veterinaria Mascotas Exóticas" a las personas idóneas en las cuales puedo depositar la vida de mis animales de granja: la población de gallinas, conejos, patos y perros. No solo valoramos la pronta atención, sino que su conocimiento y calidez humana marcan toda la diferencia.',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
-    verified: true
-  },
-  {
-    id: 'rev-3',
-    author: 'Helen Guadalupe Ramirez Ciro',
-    location: 'Rionegro, Antioquia',
-    pet: 'Hámster',
-    rating: 5,
-    date: 'Hace 2 meses',
-    text: 'Una experiencia maravillosa para mí y mi hámster, ¡una calidad humana inmensa y un amor por los animales muy notorio! Es una veterinaria asombrosa, muy paciente y con una forma de ser muy tierna aparte de que su manera de explicar es muy fácil.',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
-    verified: true
-  },
-  {
-    id: 'rev-4',
-    author: 'Juliana Valencia',
-    location: 'La Ceja, Antioquia',
-    pet: 'Mascota Exótica',
-    rating: 5,
-    date: 'Hace 2 meses',
-    text: 'Nuestra experiencia con la doc, como le decimos de cariño, ha sido hermosa y muy acertada. Es una profesional en todo el ámbito, es cariñosa con nuestras mascotas, empática, tiene experiencia, una comunicación muy clara y nos ha guiado en todo momento.',
-    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80',
-    verified: true
-  },
-  {
-    id: 'rev-5',
-    author: 'Director Cyber War',
-    location: 'El Retiro, Antioquia',
-    pet: 'Conejo (Charlie)',
-    rating: 5,
-    date: 'Hace 3 meses',
-    text: '¡Absolutamente increíble! ¡La doctora veterinaria María es un regalo de los dioses! Su profesionalismo, atención al detalle y conocimiento médico de nuestro conejo familiar Charlie. Precisión quirúrgica al más alto nivel.',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
-    verified: true
-  },
-  {
-    id: 'rev-6',
-    author: 'Nataly Bustamante',
-    location: 'Marinilla, Antioquia',
-    pet: 'Conejita',
-    rating: 5,
-    date: 'Hace 6 meses',
-    text: 'Recurrimos a la doctora María del Mar porque una de nuestras conejitas recibió una herida grave. La herida era bastante profunda y de mucha dificultad, sin embargo, su intervención quirúrgica y cuidados la salvaron por completo.',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80',
-    verified: true
-  },
-  {
-    id: 'rev-7',
-    author: 'Jenny Molano Pineda',
-    location: 'Rionegro, Antioquia',
-    pet: 'Conejita',
-    rating: 5,
-    date: 'Hace 5 meses',
-    text: 'Me encanta la atención y paciencia con la que revisó a mi conejita, me parece muy buena la asesoría y el acompañamiento para hacer seguimiento y resolver dudas durante todo el proceso. El tratamiento es muy completo y lo mejor de la revisión.',
-    avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80',
-    verified: true
-  },
-  {
-    id: 'rev-8',
-    author: 'Jeniffer Ocerin',
-    location: 'Carmen de Viboral',
-    pet: 'Gallinas & Aves',
-    rating: 5,
-    date: 'Hace 2 meses',
-    text: 'Una experiencia excelente. Es muy difícil encontrar veterinarios con experiencia en aves de corral y animales exóticos, y este equipo superó todas mis expectativas. Atendieron a mis gallinas en casa con muchísimo profesionalismo y dedicación.',
-    avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=120&q=80',
-    verified: true
-  },
-  {
-    id: 'rev-9',
-    author: 'Yurany López Orozco',
-    location: 'Guarne, Antioquia',
-    pet: 'Paciente (Milú)',
-    rating: 5,
-    date: 'Hace 6 meses',
-    text: 'Quiero expresar mi agradecimiento a la veterinaria María Del Mar por el amor, la paciencia y el cuidado con el que atendió a Milú. Su profesionalismo y cariño por los animales se nota en cada detalle; hoy Milú está contenta comiendo y brincando por toda la casa.',
-    avatar: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=120&q=80',
-    verified: true
-  },
-  {
-    id: 'rev-10',
     author: 'Mary Luz García',
     location: 'La Ceja, Antioquia',
     pet: 'Erizo',
@@ -124,51 +25,7 @@ export const REAL_GOOGLE_REVIEWS: GoogleReview[] = [
     verified: true
   },
   {
-    id: 'rev-11',
-    author: 'Samantha',
-    location: 'El Retiro, Antioquia',
-    pet: 'Mascota Exótica',
-    rating: 5,
-    date: 'Hace 2 meses',
-    text: 'Esta veterinaria es excelente y súper recomendable. Me ha ayudado muchísimo con mis mascotas cada vez que lo he necesitado. Me alegra mucho que todavía existan personas con un amor tan grande por los animalitos 🫶🏽.',
-    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80',
-    verified: true
-  },
-  {
-    id: 'rev-12',
-    author: 'Sofía Carmona Ceballos',
-    location: 'Rionegro, Antioquia',
-    pet: 'Coneja',
-    rating: 5,
-    date: 'Hace 4 meses',
-    text: 'La doctora es muy amable, brinda un servicio de calidad, y es muy buena explicando lo que debemos hacer como cuidadores para el bienestar de nuestras mascotas. Desde que la encontré, solo con ella encargo la salud y bienestar de mi coneja 🤍🫧.',
-    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
-    verified: true
-  },
-  {
-    id: 'rev-13',
-    author: 'María M. Orcasita Caballero',
-    location: 'La Ceja, Antioquia',
-    pet: 'Yoyi',
-    rating: 5,
-    date: 'Hace 2 meses',
-    text: 'Ella es la mejor, siempre me atiende muy bien a mi Yoyi y me enseña cómo mejorar los cuidados.',
-    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80',
-    verified: true
-  },
-  {
-    id: 'rev-14',
-    author: 'Isabel Medina',
-    location: 'Llanogrande, Antioquia',
-    pet: 'Patos',
-    rating: 5,
-    date: 'Hace 3 meses',
-    text: '¡Les recomiendo mucho a Exótico! La Dra. María del Mar es excelente, muy acertada en sus diagnósticos y tratamientos, tiene respuesta rápida y buena disponibilidad. Aparte es muy amable; ha atendido a mis patos y siempre nos ha ido muy bien.',
-    avatar: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=120&q=80',
-    verified: true
-  },
-  {
-    id: 'rev-15',
+    id: 'rev-2',
     author: 'Erika Patiño',
     location: 'Oriente Antioqueño',
     pet: 'Mascota a Domicilio',
@@ -179,29 +36,84 @@ export const REAL_GOOGLE_REVIEWS: GoogleReview[] = [
     verified: true
   },
   {
-    id: 'rev-16',
-    author: 'Jorge Aguirre C.',
-    location: 'Local Guide',
-    pet: 'Conejito (Koffy)',
+    id: 'rev-3',
+    author: 'Daniela Gonzalez',
+    location: 'Oriente Antioqueño',
+    pet: 'Gallinas de Corral',
     rating: 5,
-    date: 'Hace 1 año',
-    text: 'Cuando mi conejito Koffy se sintió mal, contacté a la doctora María del Mar quien vino prontamente y, con toda la calma del caso, lo examinó con esa delicadeza y amor que la caracteriza; recabó toda la información de sus síntomas e historia médica.',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
+    date: 'Hace 2 meses',
+    text: 'Súper recomendada! La doctora María del Mar vino a casa para la primera consulta de todas mis gallinas y la experiencia fue buena. Es una profesional muy amable, diligente y con un trato tan cuidadoso que mis gallinas estuvieron tranquilas y a gusto durante toda la revisión. Además, se tomó el tiempo de enseñarnos y darnos excelentes recomendaciones para su cuidado. Muchas gracias por tu gran labor!!',
+    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80',
     verified: true
   },
   {
-    id: 'rev-17',
-    author: 'Sebastian Arenas Ocampo',
-    location: 'Rionegro, Antioquia',
-    pet: 'Exóticos',
+    id: 'rev-4',
+    author: 'Juan Pablo Martinez Bohorquez',
+    location: 'Local Guide',
+    pet: 'Gallinas, Conejos, Patos & Perros',
     rating: 5,
-    date: 'Hace 3 meses',
-    text: 'Una muy buena atención, disposición y ayuda profesional, junto a una muy linda actitud de parte de la veterinaria y la auxiliar.',
+    date: 'Hace 2 meses',
+    text: 'He encontrado en "Exótico - Veterinaria Mascotas Exóticas" a las personas idóneas en las cuales puedo depositar la vida de mis animales de granja: la población de gallinas, conejos, patos y perros. No solo valoramos la pronta atención, sino que su conocimiento y calidez humana marcan toda la diferencia.',
     avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
     verified: true
   },
   {
-    id: 'rev-18',
+    id: 'rev-5',
+    author: 'Helen Guadalupe Ramirez Ciro',
+    location: 'Rionegro, Antioquia',
+    pet: 'Hámster',
+    rating: 5,
+    date: 'Hace 2 meses',
+    text: 'Una experiencia maravillosa para mí y mi hámster, ¡una calidad humana inmensa y un amor por los animales muy notorio! Es una veterinaria asombrosa, muy paciente y con una forma de ser muy tierna aparte de que su manera de explicar es muy fácil.',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
+    verified: true
+  },
+  {
+    id: 'rev-6',
+    author: 'Juliana Valencia',
+    location: 'La Ceja, Antioquia',
+    pet: 'Mascota Exótica',
+    rating: 5,
+    date: 'Hace 2 meses',
+    text: 'Nuestra experiencia con la doc, como le decimos de cariño, ha sido hermosa y muy acertada. Es una profesional en todo el ámbito, es cariñosa con nuestras mascotas, empática, tiene experiencia, una comunicación muy clara y nos ha guiado en todo momento.',
+    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80',
+    verified: true
+  },
+  {
+    id: 'rev-7',
+    author: 'Jeniffer Ocerin',
+    location: 'Carmen de Viboral',
+    pet: 'Gallinas & Aves',
+    rating: 5,
+    date: 'Hace 2 meses',
+    text: 'Una experiencia excelente. Es muy difícil encontrar veterinarios con experiencia en aves de corral y animales exóticos, y este equipo superó todas mis expectativas. Atendieron a mis gallinas en casa con muchísimo profesionalismo y dedicación.',
+    avatar: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=120&q=80',
+    verified: true
+  },
+  {
+    id: 'rev-8',
+    author: 'Samantha',
+    location: 'El Retiro, Antioquia',
+    pet: 'Mascota Exótica',
+    rating: 5,
+    date: 'Hace 2 meses',
+    text: 'Esta veterinaria es excelente y súper recomendable. Me ha ayudado muchísimo con mis mascotas cada vez que lo he necesitado. Me alegra mucho que todavía existan personas con un amor tan grande por los animalitos 🫶🏽.',
+    avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80',
+    verified: true
+  },
+  {
+    id: 'rev-9',
+    author: 'María M. Orcasita Caballero',
+    location: 'La Ceja, Antioquia',
+    pet: 'Yoyi',
+    rating: 5,
+    date: 'Hace 2 meses',
+    text: 'Ella es la mejor, siempre me atiende muy bien a mi Yoyi y me enseña cómo mejorar los cuidados.',
+    avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80',
+    verified: true
+  },
+  {
+    id: 'rev-10',
     author: 'Dayana Rosales',
     location: 'La Ceja, Antioquia',
     pet: 'Mascota a Domicilio',
@@ -212,7 +124,40 @@ export const REAL_GOOGLE_REVIEWS: GoogleReview[] = [
     verified: true
   },
   {
-    id: 'rev-19',
+    id: 'rev-11',
+    author: 'Director Cyber War',
+    location: 'El Retiro, Antioquia',
+    pet: 'Conejo (Charlie)',
+    rating: 5,
+    date: 'Hace 3 meses',
+    text: '¡Absolutamente increíble! ¡La doctora veterinaria María es un regalo de los dioses! Su profesionalismo, atención al detalle y conocimiento médico de nuestro conejo familiar Charlie. Precisión quirúrgica al más alto nivel.',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
+    verified: true
+  },
+  {
+    id: 'rev-12',
+    author: 'Isabel Medina',
+    location: 'Llanogrande, Antioquia',
+    pet: 'Patos',
+    rating: 5,
+    date: 'Hace 3 meses',
+    text: '¡Les recomiendo mucho a Exótico! La Dra. María del Mar es excelente, muy acertada en sus diagnósticos y tratamientos, tiene respuesta rápida y buena disponibilidad. Aparte es muy amable; ha atendido a mis patos y siempre nos ha ido muy bien.',
+    avatar: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=120&q=80',
+    verified: true
+  },
+  {
+    id: 'rev-13',
+    author: 'Sebastian Arenas Ocampo',
+    location: 'Rionegro, Antioquia',
+    pet: 'Exóticos',
+    rating: 5,
+    date: 'Hace 3 meses',
+    text: 'Una muy buena atención, disposición y ayuda profesional, junto a una muy linda actitud de parte de la veterinaria y la auxiliar.',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
+    verified: true
+  },
+  {
+    id: 'rev-14',
     author: 'M G',
     location: 'Local Guide',
     pet: 'Conejo 🐇',
@@ -223,7 +168,51 @@ export const REAL_GOOGLE_REVIEWS: GoogleReview[] = [
     verified: true
   },
   {
-    id: 'rev-20',
+    id: 'rev-15',
+    author: 'Sofía Carmona Ceballos',
+    location: 'Rionegro, Antioquia',
+    pet: 'Coneja',
+    rating: 5,
+    date: 'Hace 4 meses',
+    text: 'La doctora es muy amable, brinda un servicio de calidad, y es muy buena explicando lo que debemos hacer como cuidadores para el bienestar de nuestras mascotas. Desde que la encontré, solo con ella encargo la salud y bienestar de mi coneja 🤍🫧.',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
+    verified: true
+  },
+  {
+    id: 'rev-16',
+    author: 'Jenny Molano Pineda',
+    location: 'Rionegro, Antioquia',
+    pet: 'Conejita',
+    rating: 5,
+    date: 'Hace 5 meses',
+    text: 'Me encanta la atención y paciencia con la que revisó a mi conejita, me parece muy buena la asesoría y el acompañamiento para hacer seguimiento y resolver dudas durante todo el proceso. El tratamiento es muy completo y lo mejor de la revisión.',
+    avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80',
+    verified: true
+  },
+  {
+    id: 'rev-17',
+    author: 'Nataly Bustamante',
+    location: 'Marinilla, Antioquia',
+    pet: 'Conejita',
+    rating: 5,
+    date: 'Hace 6 meses',
+    text: 'Recurrimos a la doctora María del Mar porque una de nuestras conejitas recibió una herida grave. La herida era bastante profunda y de mucha dificultad, sin embargo, su intervención quirúrgica y cuidados la salvaron por completo.',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80',
+    verified: true
+  },
+  {
+    id: 'rev-18',
+    author: 'Yurany López Orozco',
+    location: 'Guarne, Antioquia',
+    pet: 'Paciente (Milú)',
+    rating: 5,
+    date: 'Hace 6 meses',
+    text: 'Quiero expresar mi agradecimiento a la veterinaria María Del Mar por el amor, la paciencia y el cuidado con el que atendió a Milú. Su profesionalismo y cariño por los animales se nota en cada detalle; hoy Milú está contenta comiendo y brincando por toda la casa.',
+    avatar: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=120&q=80',
+    verified: true
+  },
+  {
+    id: 'rev-19',
     author: 'Paula Pulgarin',
     location: 'Rionegro, Antioquia',
     pet: 'Conejín',
@@ -231,6 +220,17 @@ export const REAL_GOOGLE_REVIEWS: GoogleReview[] = [
     date: 'Hace 8 meses',
     text: 'Excelente servicio, profesional y cálido con nuestras mascotas. Nuestro conejín fue el más consentido, tuvimos un diagnóstico y tratamiento acertado. ¡Mil gracias!',
     avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80',
+    verified: true
+  },
+  {
+    id: 'rev-20',
+    author: 'Jorge Aguirre C.',
+    location: 'Local Guide',
+    pet: 'Conejito (Koffy)',
+    rating: 5,
+    date: 'Hace 1 año',
+    text: 'Cuando mi conejito Koffy se sintió mal, contacté a la doctora María del Mar quien vino prontamente y, con toda la calma del caso, lo examinó con esa delicadeza y amor que la caracteriza; recabó toda la información de sus síntomas e historia médica.',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
     verified: true
   }
 ];
@@ -347,11 +347,9 @@ export const GoogleReviewsModal: React.FC<GoogleReviewsModalProps> = ({
             >
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <img
-                    src={rev.avatar}
-                    alt={rev.author}
-                    className="w-9 h-9 rounded-full object-cover border border-gray-300"
-                  />
+                  <div className="w-9 h-9 rounded-full bg-[#003622] text-white flex items-center justify-center font-bold text-xs uppercase shadow-sm shrink-0">
+                    {rev.author.charAt(0)}
+                  </div>
                   <div>
                     <h3 className="text-xs font-bold text-[#1a1c1c] flex items-center gap-1">
                       {rev.author}

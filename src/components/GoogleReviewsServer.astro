@@ -35,8 +35,22 @@ let overallRating: number = 5.0;
 let totalReviewsCount: number = 56;
 let fetchError: string | null = null;
 
-// Reseñas reales extraídas de tu perfil oficial de Google Maps
+// Reseñas reales extraídas de tu perfil oficial de Google Maps (ordenadas por fecha más reciente)
 const FALLBACK_REVIEWS: Review[] = [
+  {
+    author_name: 'Mary Luz García',
+    profile_photo_url: 'https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 3 semanas',
+    text: 'La doctora trató muy bien a mi erizo, fue muy clara en el diagnóstico como en el tratamiento y todas las indicaciones. Es una persona que se ve que tiene mucho conocimiento con este tipo de animalitos.'
+  },
+  {
+    author_name: 'Erika Patiño',
+    profile_photo_url: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 3 semanas',
+    text: 'Muy buen servicio y la veterinaria muy tierna con las mascotas. La atención domiciliaria fue súper cómoda y profesional para todos.'
+  },
   {
     author_name: 'Daniela Gonzalez',
     profile_photo_url: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80',
@@ -66,46 +80,11 @@ const FALLBACK_REVIEWS: Review[] = [
     text: 'Nuestra experiencia con la doc, como le decimos de cariño, ha sido hermosa y muy acertada. Es una profesional en todo el ámbito, es cariñosa con nuestras mascotas, empática, tiene experiencia, una comunicación muy clara y nos ha guiado en todo momento.'
   },
   {
-    author_name: 'Director Cyber War',
-    profile_photo_url: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
-    rating: 5,
-    relative_time_description: 'Hace 3 meses',
-    text: '¡Absolutamente increíble! ¡La doctora veterinaria María es un regalo de los dioses! Su profesionalismo, atención al detalle y conocimiento médico de nuestro conejo familiar Charlie. Precisión quirúrgica al más alto nivel.'
-  },
-  {
-    author_name: 'Nataly Bustamante',
-    profile_photo_url: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80',
-    rating: 5,
-    relative_time_description: 'Hace 6 meses',
-    text: 'Recurrimos a la doctora María del Mar porque una de nuestras conejitas recibió una herida grave. La herida era bastante profunda y de mucha dificultad, sin embargo, su intervención médica y cuidados la salvaron por completo.'
-  },
-  {
-    author_name: 'Jenny Molano Pineda',
-    profile_photo_url: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80',
-    rating: 5,
-    relative_time_description: 'Hace 5 meses',
-    text: 'Me encanta la atención y paciencia con la que revisó a mi conejita, me parece muy buena la asesoría y el acompañamiento para hacer seguimiento y resolver dudas durante todo el proceso. El tratamiento es muy completo.'
-  },
-  {
     author_name: 'Jeniffer Ocerin',
     profile_photo_url: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&w=120&q=80',
     rating: 5,
     relative_time_description: 'Hace 2 meses',
     text: 'Una experiencia excelente. Es muy difícil encontrar veterinarios con experiencia en aves de corral y animales exóticos, y este equipo superó todas mis expectativas. Atendieron a mis gallinas en casa con muchísimo profesionalismo y dedicación.'
-  },
-  {
-    author_name: 'Yurany López Orozco',
-    profile_photo_url: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=120&q=80',
-    rating: 5,
-    relative_time_description: 'Hace 6 meses',
-    text: 'Quiero expresar mi agradecimiento a la veterinaria María Del Mar por el amor, la paciencia y el cuidado con el que atendió a Milú. Su profesionalismo y cariño por los animales se nota en cada detalle; hoy Milú está contenta comiendo y brincando por toda la casa.'
-  },
-  {
-    author_name: 'Mary Luz García',
-    profile_photo_url: 'https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&w=120&q=80',
-    rating: 5,
-    relative_time_description: 'Hace 3 semanas',
-    text: 'La doctora trató muy bien a mi erizo, fue muy clara en el diagnóstico como en el tratamiento y todas las indicaciones. Es una persona que se ve que tiene mucho conocimiento con este tipo de animalitos.'
   },
   {
     author_name: 'Samantha',
@@ -115,46 +94,11 @@ const FALLBACK_REVIEWS: Review[] = [
     text: 'Esta veterinaria es excelente y súper recomendable. Me ha ayudado muchísimo con mis mascotas cada vez que lo he necesitado. Me alegra mucho que todavía existan personas con un amor tan grande por los animalitos 🫶🏽.'
   },
   {
-    author_name: 'Sofía Carmona Ceballos',
-    profile_photo_url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
-    rating: 5,
-    relative_time_description: 'Hace 4 meses',
-    text: 'La doctora es muy amable, brinda un servicio de calidad, y es muy buena explicando lo que debemos hacer como cuidadores para el bienestar de nuestras mascotas. Desde que la encontré, solo con ella encargo la salud y bienestar de mi coneja 🤍🫧.'
-  },
-  {
     author_name: 'María M. Orcasita Caballero',
     profile_photo_url: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=120&q=80',
     rating: 5,
     relative_time_description: 'Hace 2 meses',
     text: 'Ella es la mejor, siempre me atiende muy bien a mi Yoyi y me enseña cómo mejorar los cuidados.'
-  },
-  {
-    author_name: 'Isabel Medina',
-    profile_photo_url: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=120&q=80',
-    rating: 5,
-    relative_time_description: 'Hace 3 meses',
-    text: '¡Les recomiendo mucho a Exótico! La Dra. María del Mar es excelente, muy acertada en sus diagnósticos y tratamientos, tiene respuesta rápida y buena disponibilidad. Aparte es muy amable; ha atendido a mis patos y siempre nos ha ido muy bien.'
-  },
-  {
-    author_name: 'Erika Patiño',
-    profile_photo_url: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80',
-    rating: 5,
-    relative_time_description: 'Hace 3 semanas',
-    text: 'Muy buen servicio y la veterinaria muy tierna con las mascotas. La atención domiciliaria fue súper cómoda y profesional para todos.'
-  },
-  {
-    author_name: 'Jorge Aguirre C.',
-    profile_photo_url: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
-    rating: 5,
-    relative_time_description: 'Hace un año',
-    text: 'Cuando mi conejito Koffy se sintió mal, contacté a la doctora María del Mar quien vino prontamente y, con toda la calma del caso, lo examinó con esa delicadeza y amor que la caracteriza; recabó toda la información de sus síntomas e historia médica.'
-  },
-  {
-    author_name: 'Sebastian Arenas Ocampo',
-    profile_photo_url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
-    rating: 5,
-    relative_time_description: 'Hace 3 meses',
-    text: 'Una muy buena atención, disposición y ayuda profesional, junto a una muy linda actitud de parte de la veterinaria y la auxiliar.'
   },
   {
     author_name: 'Dayana Rosales',
@@ -164,6 +108,27 @@ const FALLBACK_REVIEWS: Review[] = [
     text: 'La mejor doctora: paciente, dispuesta, humana, dedicada, comprometida y atenta todo el tiempo a sus pacientes. Siempre disponible, nos guía y explica con claridad. Esperamos siempre seguir contando con su ayuda.'
   },
   {
+    author_name: 'Director Cyber War',
+    profile_photo_url: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 3 meses',
+    text: '¡Absolutamente increíble! ¡La doctora veterinaria María es un regalo de los dioses! Su profesionalismo, atención al detalle y conocimiento médico de nuestro conejo familiar Charlie. Precisión quirúrgica al más alto nivel.'
+  },
+  {
+    author_name: 'Isabel Medina',
+    profile_photo_url: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 3 meses',
+    text: '¡Les recomiendo mucho a Exótico! La Dra. María del Mar es excelente, muy acertada en sus diagnósticos y tratamientos, tiene respuesta rápida y buena disponibilidad. Aparte es muy amable; ha atendido a mis patos y siempre nos ha ido muy bien.'
+  },
+  {
+    author_name: 'Sebastian Arenas Ocampo',
+    profile_photo_url: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 3 meses',
+    text: 'Una muy buena atención, disposición y ayuda profesional, junto a una muy linda actitud de parte de la veterinaria y la auxiliar.'
+  },
+  {
     author_name: 'M G',
     profile_photo_url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
     rating: 5,
@@ -171,11 +136,46 @@ const FALLBACK_REVIEWS: Review[] = [
     text: 'La doc María es lo mejor... delicada, dedicada, te entrega su tiempo y su conocimiento. Excelente persona y profesional. 🐇'
   },
   {
+    author_name: 'Sofía Carmona Ceballos',
+    profile_photo_url: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 4 meses',
+    text: 'La doctora es muy amable, brinda un servicio de calidad, y es muy buena explicando lo que debemos hacer como cuidadores para el bienestar de nuestras mascotas. Desde que la encontré, solo con ella encargo la salud y bienestar de mi coneja 🤍🫧.'
+  },
+  {
+    author_name: 'Jenny Molano Pineda',
+    profile_photo_url: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 5 meses',
+    text: 'Me encanta la atención y paciencia con la que revisó a mi conejita, me parece muy buena la asesoría y el acompañamiento para hacer seguimiento y resolver dudas durante todo el proceso. El tratamiento es muy completo.'
+  },
+  {
+    author_name: 'Nataly Bustamante',
+    profile_photo_url: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 6 meses',
+    text: 'Recurrimos a la doctora María del Mar porque una de nuestras conejitas recibió una herida grave. La herida era bastante profunda y de mucha dificultad, sin embargo, su intervención médica y cuidados la salvaron por completo.'
+  },
+  {
+    author_name: 'Yurany López Orozco',
+    profile_photo_url: 'https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 6 meses',
+    text: 'Quiero expresar mi agradecimiento a la veterinaria María Del Mar por el amor, la paciencia y el cuidado con el que atendió a Milú. Su profesionalismo y cariño por los animales se nota en cada detalle; hoy Milú está contenta comiendo y brincando por toda la casa.'
+  },
+  {
     author_name: 'Paula Pulgarin',
     profile_photo_url: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=120&q=80',
     rating: 5,
     relative_time_description: 'Hace 8 meses',
     text: 'Excelente servicio, profesional y cálido con nuestras mascotas. Nuestro conejín fue el más consentido, tuvimos un diagnóstico y tratamiento acertado. ¡Mil gracias!'
+  },
+  {
+    author_name: 'Jorge Aguirre C.',
+    profile_photo_url: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80',
+    rating: 5,
+    relative_time_description: 'Hace 1 año',
+    text: 'Cuando mi conejito Koffy se sintió mal, contacté a la doctora María del Mar quien vino prontamente y, con toda la calma del caso, lo examinó con esa delicadeza y amor que la caracteriza; recabó toda la información de sus síntomas e historia médica.'
   }
 ];
 
@@ -297,14 +297,6 @@ if (apiKey && placeId) {
     </div>
   </div>
 
-  <!-- Error / Aviso Informativo si aplica -->
-  {fetchError && (
-    <div class="p-3 bg-amber-50 border border-amber-200 rounded-xl text-amber-900 text-xs flex items-center gap-2">
-      <span class="material-symbols-outlined text-[18px]">info</span>
-      <span>Modo respaldo: {fetchError}. Mostrando reseñas destacadas.</span>
-    </div>
-  )}
-
   <!-- Grid de Reseñas Renderizadas en Servidor (SSR/SSG) -->
   <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
     {reviews.map((review) => (
@@ -313,14 +305,9 @@ if (apiKey && placeId) {
           <!-- Cabecera del Autor -->
           <div class="flex items-center justify-between">
             <div class="flex items-center gap-3">
-              <img
-                src={review.profile_photo_url || 'https://lh3.googleusercontent.com/a/default-user'}
-                alt={`Foto de perfil de ${review.author_name}`}
-                class="w-10 h-10 rounded-full object-cover border border-gray-200"
-                loading="lazy"
-                width="40"
-                height="40"
-              />
+              <div class="w-10 h-10 rounded-full bg-[#003622] text-white flex items-center justify-center font-bold text-sm uppercase shadow-sm shrink-0">
+                {review.author_name.charAt(0)}
+              </div>
               <div>
                 <h3 class="text-xs font-bold text-[#1a1c1c] leading-tight flex items-center gap-1">
                   {review.author_name}
