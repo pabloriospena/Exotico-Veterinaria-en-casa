@@ -2,7 +2,7 @@ export interface SpeciesInfo {
   id: string;
   name: string;
   subtitle: string;
-  category: 'roedores' | 'aves' | 'pequeños-mamiferos';
+  category: 'pequeños-mamiferos' | 'roedores' | 'aves-compania' | 'aves-finca' | 'exoticos';
   icon: string;
   image: string;
   badge: string;
@@ -51,75 +51,119 @@ export interface FaqItem {
 
 export const SPECIES_LIST: SpeciesInfo[] = [
   {
-    id: 'conejos-roedores',
-    name: 'Conejos & Roedores',
-    subtitle: 'Cobayos / cuyes (como Punky), hámsters y chinchillas',
-    category: 'roedores',
+    id: 'conejos',
+    name: 'Conejos',
+    subtitle: 'Lagomorfos / Pequeños Mamíferos',
+    category: 'pequeños-mamiferos',
     icon: 'cruelty_free',
-    badge: 'Atención especial para presas',
+    badge: 'Manejo Fear-Free para Presas',
     image: 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=800&q=80',
-    description: 'Revisión de sacos perineales, corte y limado de incisivos y molares, palpación abdominal por sospecha de estasis digestiva y asesoría de nutrición basada 80% en heno de buena calidad.',
+    description: 'Atención especializada en conejos domésticos. Revisión de dentición (incisivos/molares), palpación abdominal por estasis digestiva, limpieza de glándulas y prevención de pododermatitis.',
     commonSymptoms: [
-      'Dejó de comer heno o balanceado (>6 horas es urgencia)',
-      'Heces más pequeñas, unidas por pelo o ausencia de excretas',
-      'Dientes sobrecrecidos o rechina el hocico con fuerza',
-      'Sacos perineales obstruidos o acumulación de cecotrofos',
-      'Inactividad, postura encorvada o chirrido de dolor'
+      'Dejó de comer heno (>6 horas es urgencia)',
+      'Heces pequeñas, duras, unidas con pelo o ausentes',
+      'Rechina los dientes con dolor o postura encorvada',
+      'Sacos perineales sucios o cecotrofos pegados'
     ],
     procedures: [
-      'Limado y corte dental de incisivos y molares con instrumental suave',
-      'Higiene de sacos perineales y glándulas marcadoras',
-      'Protocolos de rehidratación y motilidad por estasis intestinal',
-      'Evaluación de pododermatitis en patas traseras'
+      'Limado y desgaste de incisivos y molares con Dremel',
+      'Protocolos de rehidratación y motilidad digestiva',
+      'Cuidado dermatológico y corte seguro de uñas',
+      'Asesoría nutricional basada 80% en heno'
     ],
-    careTip: 'El heno es el motor de su digestión y desgaste dental. Si un conejo o cuy pasa más de 12 horas sin comer heno, su flora intestinal entra en riesgo grave.'
+    careTip: 'El heno es el motor de su digestión y desgaste dental continuo. Si un conejo pasa más de 12 horas sin comer heno, su flora cecal entra en riesgo grave.'
   },
   {
-    id: 'aves-finca',
-    name: 'Aves de Finca & Compañía',
-    subtitle: 'Periquitos, ninfas, agapornis, gallinas sedosas, Brahma, patos (como Ramón) y gansos',
-    category: 'aves',
-    icon: 'flutter',
-    badge: 'Manejo aviario Fear-Free',
-    image: 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=800&q=80',
-    description: 'Chequeo respiratorio in situ, sexaje aviar por ADN, examen de buche, corte y limado de picos con Dremel, pododermatitis (clumblefoot) y vacunación aviar preventiva.',
+    id: 'roedores',
+    name: 'Roedores',
+    subtitle: 'Cobayos (Cuyes como Punky), Hámsters, Chinchillas y Ratas',
+    category: 'roedores',
+    icon: 'pets',
+    badge: 'Cuidado Odontológico & Digestivo',
+    image: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=800&q=80',
+    description: 'Evaluación de cobayos (cuyes), hámsters, chinchillas y ratas domésticas. Detección de sobrecrecimiento molar, cálculos vesicales, deficiencia de vitamina C (en cobayos) y respiración agitada.',
     commonSymptoms: [
-      'Plumas erizadas y permanece en el piso de la jaula o gallinero',
+      'Dejó de comer o masticar balanceado/fresco',
+      'Salivación excesiva o babero mojado (problema dental)',
+      'Dificultad para orinar o sangre en la orina (cobayos)',
+      'Ruidos respiratorios, estornudos o apatía'
+    ],
+    procedures: [
+      'Higiene perineal y desobstrucción de sacos en cuyes',
+      'Corte y alineación técnica molar/incisiva',
+      'Suplementación clínica de Vitamina C y fluidoterapia',
+      'Evaluación ecográfica de vejiga con SonoBook 8'
+    ],
+    careTip: 'Los cobayos (cuyes) no sintetizan vitamina C por sí mismos. Necesitan aporte diario en su dieta fresca o suplementación recomendada por el especialista.'
+  },
+  {
+    id: 'aves-compania',
+    name: 'Aves de Compañía',
+    subtitle: 'Ninfas, Agapornis, Periquitos, Loros, Canarios y Cacatúas',
+    category: 'aves-compania',
+    icon: 'flutter',
+    badge: 'Sexaje ADN & Medicina Aviar',
+    image: 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=800&q=80',
+    description: 'Medicina preventiva y curativa para psitácidos y passeriformes en el hogar. Arreglo funcional de picos, sexaje genético por ADN, control de picaje, buche y problemas respiratorios.',
+    commonSymptoms: [
+      'Plumas erizadas y permanece embolado en el piso',
       'Secreción nasal, estornudos o boqueo al respirar',
-      'Buche blando lleno de fluido o duro/impactado',
-      'Pico deformado que le impide alimentarse',
-      'Pérdida de postura en gallinas o patas hinchadas'
+      'Pico deformado que le impide comer',
+      'Buche blando lleno de fluido o impactado'
     ],
     procedures: [
       'Corte y limado estético/funcional de picos y uñas con Dremel',
-      'Sexaje genético por ADN (pluma o sangre)',
-      'Lavado/sondeo de buche e inseminación/evaluación reproductiva',
-      'Planes de vacunación aviar (Newcastle, Viruela) en fincas'
+      'Sexaje genético certero por ADN (pluma o sangre)',
+      'Lavado/sondeo de buche y nebulizaciones',
+      'Examen coprológico directo para parásitos'
     ],
-    careTip: 'Las aves enmascaran la enfermedad por instinto. Cuando notas que una ninfa o gallina está embolada o apática, suele llevar días sintiéndose mal.'
+    careTip: 'Las aves ocultan la enfermedad por instinto. Cuando notas que una ninfa o agapornis está embolado o decaído, suele llevar días sintiéndose mal.'
   },
   {
-    id: 'pequenos-mamiferos',
-    name: 'Pequeños Mamíferos & No Convencionales',
-    subtitle: 'Erizos africanos (como Alma) y mini pigs (como Toreto)',
-    category: 'pequeños-mamiferos',
-    icon: 'pets',
-    badge: 'Condicionamiento positivo',
-    image: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=800&q=80',
-    description: 'Desparasitación dirigida, evaluación dermatológica (ácaros/resequedad), recorte de pezuñas con paciencia y refuerzo positivo en su propio corral o recinto campestre.',
+    id: 'aves-finca',
+    name: 'Aves de Finca & Corral',
+    subtitle: 'Gallinas (Sedosas, Brahma, Ponedoras), Patos (como Ramón), Gansos y Pavos',
+    category: 'aves-finca',
+    icon: 'egg',
+    badge: 'Medicina Poblacional & Corral',
+    image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=800&q=80',
+    description: 'Atención integral en fincas para gallinas ornamentales, ponedoras, patos y gansos. Tratamiento de pododermatitis (bumblefoot), retención de huevo, vacunas de lote y cortes de pico.',
     commonSymptoms: [
-      'Pérdida excesiva de púas o descamación en la piel (erizos)',
-      'Pezuñas sobrecrecidas que causan cojera o dolor al caminar (mini pigs)',
-      'Aumento exagerado de peso o problemas de comportamiento',
-      'Rascado intenso, costras en orejas o pérdida de apetito'
+      'Cojera o inflamación con pus en la planta de la pata (pododermatitis)',
+      'Abdomen abultado o postura de pingüino (retención de huevo)',
+      'Secreción ocular/nasal o moquillo aviar',
+      'Heridas por ataques de depredadores o peleas'
     ],
     procedures: [
-      'Corte técnico de pezuñas en mini pigs con técnica libre de violencia',
-      'Examen dermatológico y raspado de piel para ácaros',
-      'Planes de nutrición específicos para erizos y cerdos enanos',
-      'Revisión cardiopulmonar y temperatura corporal'
+      'Tratamiento de pododermatitis y curación de heridas',
+      'Planes de vacunación preventiva (Newcastle, Viruela aviar)',
+      'Desparasitación interna/externa de lote',
+      'Atención de emergencias reproductivas'
     ],
-    careTip: 'Para los erizos africanos, el frío del Oriente Antioqueño es un reto: asegúrate de mantener su recinto entre 24°C y 27°C para evitar hibernación patológica.'
+    careTip: 'En patos y gallinas, la humedad constante en los corrales favorece bacterias en las patas. Un suelo seco con virita o pasto previene bumblefoot doloroso.'
+  },
+  {
+    id: 'exoticos-minipigs',
+    name: 'Exóticos & Minipigs',
+    subtitle: 'Minipigs (como Toreto), Erizos Africanos (como Alma) y Hurones',
+    category: 'exoticos',
+    icon: 'sound_detection_dog_barking',
+    badge: 'Atención Especializada sin Sedación',
+    image: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=800&q=80',
+    description: 'Manejo respetuoso para especies no convencionales. Recorte técnico de pezuñas en minipigs con refuerzo positivo, control dermatológico en erizos y nutrición de hurones.',
+    commonSymptoms: [
+      'Pezuñas sobrecrecidas que causan cojera en minipigs',
+      'Pérdida de púas, costras u orejas deshilachadas (erizos)',
+      'Soplos cardíacos, decaimiento o diarreas (hurones)',
+      'Obesidad o problemas de comportamiento'
+    ],
+    procedures: [
+      'Pedicura técnica con Dremel para minipigs en su corral',
+      'Raspado de piel e identificación de ácaros en erizos',
+      'Planes antiparasitarios y de vacunación específica',
+      'Termorregulación y recomendaciones de habitáculo'
+    ],
+    careTip: 'Los erizos africanos no toleran las bajas temperaturas. En el clima frío del Oriente Antioqueño requieren placa térmica o calefacción para no entrar en hibernación peligrosa.'
   }
 ];
 
@@ -282,7 +326,7 @@ export const PATIENT_STORIES: PatientStory[] = [
     petName: 'Punky el cobayo',
     ownerLocation: 'La Ceja, Antioquia',
     speciesTag: 'Cuy / Cobayo',
-    icon: 'cruelty_free',
+    icon: 'pets',
     testimonial: 'Dejó de comer de un día para otro y estaba muy decaído. La doctora vino a nuestra finca en La Ceja, le detectó sobrecrecimiento en molares traseros con otoscopio y limpió sus sacos perineales. Esa misma noche volvió a masticar su heno feliz.',
     treatment: 'Limado molar suave, higiene perineal y terapia de motilidad'
   },
@@ -291,7 +335,7 @@ export const PATIENT_STORIES: PatientStory[] = [
     petName: 'Ramón el pato',
     ownerLocation: 'Rionegro (Llanogrande)',
     speciesTag: 'Pato de Finca',
-    icon: 'flutter',
+    icon: 'egg',
     testimonial: 'Sufrió una herida menor en el ala cerca al estanque. Desinfección, curación y manejo del dolor directo en su corral en Rionegro sin tener que meterlo a un huacal estresante por carretera.',
     treatment: 'Curación de herida aviaria, antibiótico depot y analgesia'
   },
@@ -300,7 +344,7 @@ export const PATIENT_STORIES: PatientStory[] = [
     petName: 'Alma la eriza',
     ownerLocation: 'El Retiro, Antioquia',
     speciesTag: 'Eriza Africana',
-    icon: 'pets',
+    icon: 'sound_detection_dog_barking',
     testimonial: 'Chequeo dermatológico completo para descartar ácaros y control de peso en El Retiro con una delicadeza única. Cero estrés para ella y consejos clave de calefacción para el clima frío de nuestra zona.',
     treatment: 'Tratamiento antiparasitario cutáneo y termorregulación'
   },

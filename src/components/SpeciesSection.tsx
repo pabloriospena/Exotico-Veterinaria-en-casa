@@ -8,6 +8,15 @@ export const SpeciesSection: React.FC = () => {
     (s) => activeTab === 'todos' || s.category === activeTab
   );
 
+  const categories = [
+    { id: 'todos', label: 'Todas las Especies' },
+    { id: 'pequeños-mamiferos', label: 'Conejos' },
+    { id: 'roedores', label: 'Roedores (Cuyes, Hámsters, Chinchillas, Ratas)' },
+    { id: 'aves-compania', label: 'Aves de Compañía' },
+    { id: 'aves-finca', label: 'Aves de Finca & Corral' },
+    { id: 'exoticos', label: 'Exóticos & Minipigs (Hurones, Erizos, Minipigs)' },
+  ];
+
   return (
     <section id="especies" className="flex flex-col px-4 md:px-8 py-8 gap-6 max-w-5xl mx-auto">
       <div className="flex flex-col gap-1">
@@ -24,16 +33,11 @@ export const SpeciesSection: React.FC = () => {
 
       {/* Filter Tabs */}
       <div className="flex flex-wrap gap-2">
-        {[
-          { id: 'todos', label: 'Todas las Especies' },
-          { id: 'roedores', label: 'Conejos & Roedores' },
-          { id: 'aves', label: 'Aves & Gallinas' },
-          { id: 'pequeños-mamiferos', label: 'Erizos & Mini Pigs' },
-        ].map((tab) => (
+        {categories.map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${
+            className={`px-3.5 py-2 rounded-full text-xs font-semibold transition-all ${
               activeTab === tab.id
                 ? 'bg-[#003622] text-white shadow-sm'
                 : 'bg-[#d9e6da]/60 text-[#003622] hover:bg-[#d9e6da]'
@@ -45,7 +49,7 @@ export const SpeciesSection: React.FC = () => {
       </div>
 
       {/* Species Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {filteredSpecies.map((sp: SpeciesInfo) => (
           <div
             key={sp.id}
@@ -59,7 +63,7 @@ export const SpeciesSection: React.FC = () => {
                   </span>
                   <div>
                     <h3 className="text-base font-bold text-[#003622] leading-snug">{sp.name}</h3>
-                    <span className="text-[11px] text-[#404943] block leading-tight">{sp.subtitle}</span>
+                    <span className="text-[11px] text-[#404943] block leading-tight font-medium">{sp.subtitle}</span>
                   </div>
                 </div>
               </div>
