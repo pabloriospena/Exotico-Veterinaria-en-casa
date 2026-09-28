@@ -18,7 +18,7 @@ export const SpeciesSection: React.FC = () => {
           Especies que Atendemos en Casa & Finca
         </h2>
         <p className="text-xs md:text-sm text-[#404943]">
-          Abordaje empático y adaptado a la etología de cada especie en su hábitat cotidiano en La Ceja, Rionegro y Oriente Antioqueño cercano.
+          Abordaje empático y adaptado a la etología de cada especie en su hábitat cotidiano en La Ceja, Rionegro y Oriente Antioqueño.
         </p>
       </div>
 
@@ -26,17 +26,21 @@ export const SpeciesSection: React.FC = () => {
       <div className="flex flex-wrap gap-2">
         {[
           { id: 'todos', label: 'Todas las Especies' },
-          { id: 'roedores', label: 'Conejos & Roedores' },
-          { id: 'aves', label: 'Aves & Gallinas' },
-          { id: 'pequeños-mamiferos', label: 'Erizos & Mini Pigs' },
+          { id: 'pequeños-mamiferos', label: 'Conejos' },
+          { id: 'roedores', label: 'Roedores' },
+          { id: 'aves-compania', label: 'Aves de Compañía' },
+          { id: 'aves-finca', label: 'Aves de Finca' },
+          { id: 'exoticos', label: 'Exóticos' },
+          { id: 'minipigs', label: 'Minipigs' },
         ].map((tab) => (
           <button
             key={tab.id}
             onClick={() => setActiveTab(tab.id)}
-            className={`px-4 py-2 rounded-full text-xs font-semibold transition-all ${activeTab === tab.id
-              ? 'bg-[#003622] text-white shadow-sm'
-              : 'bg-[#d9e6da]/60 text-[#003622] hover:bg-[#d9e6da]'
-              }`}
+            className={`px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all ${
+              activeTab === tab.id
+                ? 'bg-[#003622] text-white shadow-sm'
+                : 'bg-[#d9e6da]/60 text-[#003622] hover:bg-[#d9e6da]'
+            }`}
           >
             {tab.label}
           </button>
@@ -44,7 +48,7 @@ export const SpeciesSection: React.FC = () => {
       </div>
 
       {/* Species Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {filteredSpecies.map((sp: SpeciesInfo) => (
           <div
             key={sp.id}

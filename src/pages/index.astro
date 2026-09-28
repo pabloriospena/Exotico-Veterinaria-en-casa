@@ -1,11 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import App from '../App';
+import GoogleReviewsServer from '../components/GoogleReviewsServer.astro';
 ---
 
 <Layout
-  title="Exótico Vet - Veterinaria a Domicilio Oriente Antioqueño"
+  title="Exótico - Veterinaria a Domicilio Oriente Antioqueño"
   description="Atención veterinaria especializada a domicilio para conejos, aves, cuyes, erizos y mini pigs en La Ceja, Rionegro, El Retiro y Oriente Antioqueño."
 >
   <App client:load />
+  
+  <!-- Componente Astro Renderizado 100% en Servidor (SSR/SSG) para SEO -->
+  <GoogleReviewsServer />
 </Layout>
