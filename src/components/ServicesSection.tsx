@@ -10,7 +10,7 @@ export const ServicesSection: React.FC = () => {
       <div className="rounded-3xl bg-gradient-to-br from-[#134e35] to-[#003622] text-white p-6 md:p-8 flex flex-col gap-5 shadow-lg relative overflow-hidden">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#d9e6da]/20 text-[#b4f0cd] self-start text-xs font-semibold">
           <span className="material-symbols-outlined text-[16px]">medical_services</span>
-          <span>Equipamiento Diagnóstico Móvil a Domicilio</span>
+          <span>Diagnóstico a Domicilio</span>
         </div>
 
         <div className="flex flex-col gap-1 max-w-2xl">

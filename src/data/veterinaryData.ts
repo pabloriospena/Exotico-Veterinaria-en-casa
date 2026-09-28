@@ -198,9 +198,9 @@ export const SERVICES_LIST: ServiceInfo[] = [
     fullDesc: 'Evaluamos minuciosamente al paciente en su entorno habitual sin provocarle estrés de viaje. Revisamos dieta, recinto, signos vitales, pesaje de precisión y examen clínico completo.',
     icon: 'stethoscope',
     highlights: [
-      'Revisión clínica integral de cabeza a cola',
+      'Revisión clínica integral',
       'Análisis de dieta, humedad, sustrato y temperatura',
-      'Pesaje digital sensible gramo a gramo',
+      'Pesaje digital',
       'Recetario y plan de cuidados por escrito'
     ],
     recommendedFor: 'Revisión anual, nuevos integrantes o cambios de comportamiento.'
@@ -262,13 +262,13 @@ export const SERVICES_LIST: ServiceInfo[] = [
     recommendedFor: 'Fincas en La Ceja, Rionegro, El Retiro con galpones o aves de corral.'
   },
   {
-    id: 'sexaje-adn',
-    title: 'Sexaje por ADN & Laboratorio Clínico',
+    id: 'sexaje',
+    title: 'Sexaje & Laboratorio Clínico',
     shortDesc: 'Identificación genético-reproductiva de aves y exámenes complementarios.',
     fullDesc: 'Toma de muestra de plumas o gota de sangre para determinar el sexo genético de aves monomórficas (agapornis, ninfas, loros) con certificado de laboratorio.',
     icon: 'science',
     highlights: [
-      'Sexaje 99.9% certero con certificado digital',
+      'Sexaje',
       'Coprológicos e identificación de parásitos en heces',
       'Hemogramas y citologías aviarias/mamíferas',
       'Toma de muestra sin dolor'
@@ -282,49 +282,49 @@ export const MUNICIPALITIES: MunicipalityInfo[] = [
     name: 'La Ceja',
     isPrimary: true,
     veredas: ['San José', 'El Salto', 'Llanos de La Ceja', 'La Milagrosa', 'Pantanillo', 'El Tambo', 'Fátima', 'Colmenas', 'Rancho Triste'],
-    frequency: 'Ruta Diaria (Sede Base)',
+    frequency: 'Programación Bajo Agenda',
     estimatedArrival: '30 - 45 min'
   },
   {
     name: 'Rionegro',
     isPrimary: true,
     veredas: ['Llanogrande', 'Pontezuela', 'San Antonio de Pereira', 'Cabeceras', 'El Tablazo', 'Abreo', 'Santa Teresa', 'Barro Blanco'],
-    frequency: 'Ruta Diaria',
+    frequency: 'Programación Bajo Agenda',
     estimatedArrival: '45 - 60 min'
   },
   {
     name: 'El Retiro',
     isPrimary: true,
     veredas: ['Don Diego', 'Lejos del Nido', 'La María', 'El Borbollón', 'Pantancito', 'Carrizales'],
-    frequency: 'Lunes, Miércoles y Viernes',
+    frequency: 'Programación Bajo Agenda',
     estimatedArrival: '45 - 60 min'
   },
   {
     name: 'Marinilla',
     isPrimary: false,
     veredas: ['Belén', 'Cascajo', 'La Esmeralda', 'El Socorro', 'Chochoco'],
-    frequency: 'Martes, Jueves y Sábados',
+    frequency: 'Programación Bajo Agenda',
     estimatedArrival: '50 - 70 min'
   },
   {
     name: 'El Carmen de Viboral',
     isPrimary: false,
     veredas: ['La Chapa', 'Campo Alegre', 'Rivera', 'El Canadá'],
-    frequency: 'Martes, Jueves y Sábados',
+    frequency: 'Programación Bajo Agenda',
     estimatedArrival: '45 - 65 min'
   },
   {
     name: 'Guarne',
     isPrimary: false,
     veredas: ['San Isidro', 'Brazuela', 'La Clara', 'Bermejal'],
-    frequency: 'Programación Semanal',
+    frequency: 'Programación Bajo Agenda',
     estimatedArrival: '60 - 80 min'
   },
   {
     name: 'La Unión',
     isPrimary: false,
     veredas: ['Chuscalito', 'San Juan', 'La Madera'],
-    frequency: 'Programación Semanal',
+    frequency: 'Programación Bajo Agenda',
     estimatedArrival: '45 - 60 min'
   },
   {

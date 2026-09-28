@@ -80,11 +80,6 @@ export default function App() {
       <FloatingWhatsAppBar />
 
       {/* Bottom Touch Navigation Bar */}
-      <BottomNavBar
-        activeSection={activeSection}
-        setActiveSection={setActiveSection}
-        onOpenReviewsModal={() => setIsReviewsOpen(true)}
-      />
 
       {/* Google Reviews Modal */}
       <GoogleReviewsModal

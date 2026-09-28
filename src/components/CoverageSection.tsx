@@ -24,7 +24,7 @@ export const CoverageSection: React.FC = () => {
           Cobertura en Oriente Antioqueño
         </h2>
         <p className="text-xs md:text-sm text-[#404943]">
-          Rutas programadas directamente en veredas, fincas campestres y cascos urbanos.
+          Atención en fincas campestres y cascos urbanos.
         </p>
       </div>
 
@@ -70,18 +70,12 @@ export const CoverageSection: React.FC = () => {
           <button
             key={m.name}
             onClick={() => setSelectedMunicipality(m)}
-            className={`px-3.5 py-2 rounded-full text-xs font-bold transition-all flex items-center gap-1.5 ${
-              selectedMunicipality?.name === m.name
-                ? 'bg-[#003622] text-white shadow-sm'
-                : 'bg-white text-[#003622] border border-gray-200 hover:bg-gray-100'
-            }`}
+            className={`px-3.5 py-2 rounded-full text-xs font-bold transition-all flex items-center gap-1.5 ${selectedMunicipality?.name === m.name
+              ? 'bg-[#003622] text-white shadow-sm'
+              : 'bg-white text-[#003622] border border-gray-200 hover:bg-gray-100'
+              }`}
           >
             <span>{m.name}</span>
-            {m.isPrimary && (
-              <span className="text-[9px] bg-[#d9e6da] text-[#134e35] px-1.5 py-0.2 rounded-full font-bold">
-                Base
-              </span>
-            )}
           </button>
         ))}
       </div>

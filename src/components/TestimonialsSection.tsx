@@ -19,7 +19,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
           setRating(data.rating);
         }
       })
-      .catch(() => {});
+      .catch(() => { });
   }, []);
 
   const filteredStories = PATIENT_STORIES.filter((st) => {
@@ -33,27 +33,6 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
 
   return (
     <section id="reseñas" className="flex flex-col px-4 md:px-8 py-8 gap-6 max-w-5xl mx-auto">
-      {/* Vet Bio Card */}
-      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5 p-6 rounded-3xl bg-white shadow-sm border border-gray-100">
-        <div className="relative shrink-0">
-          <img
-            className="w-24 h-24 rounded-full object-cover shadow-sm border-2 border-[#b4f0cd]"
-            alt="Exótico"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeFqQFJSzlyMTwjvw60uY9-6Sgu9WMneBvdOTQRt61aoKadxgYgLBgFrUBHEo2JR-c0XSACLsDva5wf_h0jrGvBvZyyhOMYHYe_34WbbYa_zjC2ZXvTNIbV2u2HoNzEwt3BpA6F0zlchFfAyZeEuGcPVXaANwFib__nr9Ga_e44BdanAPu_VZiQ5llUBOYF1R1iM9vcLJm57MwGCDEVonJ2r5HUdH06_xXmyXrzYkksIhDPU5SaM-EpA"
-          />
-        </div>
-
-        <div className="flex flex-col text-center sm:text-left gap-1 flex-1">
-          <span className="text-[11px] font-bold text-[#7c2800] uppercase tracking-wider">Sobre Mí</span>
-          <h3 className="text-lg font-bold text-[#003622]">Medicina Aves y Animales Exóticos</h3>
-          <span className="text-xs font-semibold text-[#556158]">
-            MV. GRAND MASTER
-          </span>
-          <p className="text-xs text-[#404943] pt-1 leading-relaxed">
-            Viviendo el sueño de llevar salud y respeto a cada rincón del Oriente Antioqueño. Menos clínica blanca fría, más aire puro y tranquilidad para tu animalito.
-          </p>
-        </div>
-      </div>
 
       {/* Patient Stories Header */}
       <div className="flex items-center justify-between">
@@ -87,11 +66,10 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
           <button
             key={f.id}
             onClick={() => setFilter(f.id)}
-            className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
-              filter === f.id
-                ? 'bg-[#003622] text-white'
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
+            className={`px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${filter === f.id
+              ? 'bg-[#003622] text-white'
+              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
           >
             {f.label}
           </button>
