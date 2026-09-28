@@ -6,6 +6,7 @@
 import React, { useState, useEffect } from 'react';
 import { Header } from './components/Header';
 import { HeroSection } from './components/HeroSection';
+import { AboutMeSection } from './components/AboutMeSection';
 import { SpeciesSection } from './components/SpeciesSection';
 import { ServicesSection } from './components/ServicesSection';
 import { CoverageSection } from './components/CoverageSection';
@@ -23,7 +24,7 @@ export default function App() {
   // Scroll spy to update active navigation item
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['inicio', 'especies', 'servicios', 'cobertura', 'reseñas', 'faq'];
+      const sections = ['inicio', 'sobre-mi', 'especies', 'servicios', 'cobertura', 'reseñas', 'faq'];
       const scrollPosition = window.scrollY + 200;
 
       for (const sectionId of sections) {
@@ -57,6 +58,8 @@ export default function App() {
         <HeroSection
           onOpenReviewsModal={() => setIsReviewsOpen(true)}
         />
+
+        <AboutMeSection />
 
         <SpeciesSection />
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface HeroSectionProps {
   onOpenReviewsModal: () => void;
@@ -7,6 +7,21 @@ interface HeroSectionProps {
 export const HeroSection: React.FC<HeroSectionProps> = ({
   onOpenReviewsModal,
 }) => {
+  const [rating, setRating] = useState<number>(5.0);
+  const [reviewsCount, setReviewsCount] = useState<number>(56);
+
+  useEffect(() => {
+    fetch('/api/google-reviews')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status === 'OK') {
+          if (data.rating) setRating(data.rating);
+          if (data.user_ratings_total) setReviewsCount(data.user_ratings_total);
+        }
+      })
+      .catch(() => {});
+  }, []);
+
   return (
     <section id="inicio" className="flex flex-col px-4 md:px-8 pt-4 pb-8 gap-5 max-w-5xl mx-auto">
       {/* Trust Pill */}
@@ -28,35 +43,24 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       </div>
 
       {/* Social Proof Badges */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+      <div className="w-full pt-1">
         {/* Google Reviews Clickable Badge */}
         <div
           onClick={onOpenReviewsModal}
-          className="flex items-center justify-between p-3.5 rounded-2xl bg-white shadow-sm border border-gray-200 cursor-pointer hover:bg-gray-50 transition-colors"
+          className="flex items-center justify-between p-4 rounded-2xl bg-white shadow-sm border border-gray-200 cursor-pointer hover:bg-gray-50 transition-colors"
         >
-          <div className="flex items-center gap-2.5">
-            <span className="material-symbols-outlined text-[#7c2800] text-[24px] fill-1">
+          <div className="flex items-center gap-3">
+            <span className="material-symbols-outlined text-[#7c2800] text-[26px] fill-1">
               star
             </span>
             <div className="flex flex-col min-w-0">
-              <span className="text-xs md:text-sm text-[#1a1c1c] font-bold truncate">4.9 en Google</span>
-              <span className="text-[11px] text-[#404943] truncate">120+ opiniones reales</span>
+              <span className="text-xs md:text-sm text-[#1a1c1c] font-bold truncate">{rating.toFixed(1)} en Google Maps</span>
+              <span className="text-[11px] text-[#404943] truncate">{reviewsCount}+ opiniones de clientes verificados</span>
             </div>
           </div>
           <span className="text-xs text-[#003622] font-bold underline flex items-center gap-0.5">
-            Ver reseñas <span className="material-symbols-outlined text-[16px]">chevron_right</span>
+            Ver todas las reseñas <span className="material-symbols-outlined text-[16px]">chevron_right</span>
           </span>
-        </div>
-
-        {/* Qualification Badge */}
-        <div className="flex items-center gap-2.5 p-3.5 rounded-2xl bg-white shadow-sm border border-gray-200">
-          <span className="material-symbols-outlined text-[#003622] text-[24px]">
-            workspace_premium
-          </span>
-          <div className="flex flex-col min-w-0">
-            <span className="text-xs md:text-sm text-[#1a1c1c] font-bold truncate">Medicina Aves y Animales Exóticos</span>
-            <span className="text-[11px] text-[#404943] truncate">MV. GRAND MASTER</span>
-          </div>
         </div>
       </div>
 

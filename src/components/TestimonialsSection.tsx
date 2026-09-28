@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { PATIENT_STORIES, PatientStory } from '../data/veterinaryData';
 
 interface TestimonialsSectionProps {
@@ -9,6 +9,18 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   onOpenReviewsModal,
 }) => {
   const [filter, setFilter] = useState<string>('todos');
+  const [rating, setRating] = useState<number>(5.0);
+
+  useEffect(() => {
+    fetch('/api/google-reviews')
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.status === 'OK' && data.rating) {
+          setRating(data.rating);
+        }
+      })
+      .catch(() => {});
+  }, []);
 
   const filteredStories = PATIENT_STORIES.filter((st) => {
     if (filter === 'todos') return true;
@@ -58,7 +70,7 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
           onClick={onOpenReviewsModal}
           className="hidden sm:flex items-center gap-2 px-4 py-2.5 rounded-2xl bg-white border border-gray-200 text-[#003622] font-bold text-xs shadow-sm hover:bg-gray-50 transition-colors"
         >
-          <span className="text-amber-500 font-bold">4.9 ★</span>
+          <span className="text-amber-500 font-bold">{rating.toFixed(1)} ★</span>
           <span>Ver Reseñas Google</span>
         </button>
       </div>
