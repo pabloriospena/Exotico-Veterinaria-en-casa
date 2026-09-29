@@ -19,7 +19,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           if (data.user_ratings_total) setReviewsCount(data.user_ratings_total);
         }
       })
-      .catch(() => {});
+      .catch(() => { });
   }, []);
 
   return (
@@ -104,9 +104,6 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
 
       {/* Biosecurity Notice Banner */}
       <div className="flex items-start gap-3 p-4 rounded-2xl bg-[#f3f3f3] border border-gray-200 shadow-sm">
-        <span className="material-symbols-outlined text-[#003622] text-[22px] shrink-0 mt-0.5">
-          sanitizer
-        </span>
         <p className="text-xs md:text-sm text-[#404943] leading-relaxed">
           <strong className="font-bold text-[#003622]">Atención personalizada:</strong> Servicios programados en fincas y residencias y valoración holística sin apuros.
         </p>

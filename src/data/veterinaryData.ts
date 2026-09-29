@@ -107,12 +107,12 @@ export const SPECIES_LIST: SpeciesInfo[] = [
   {
     id: 'aves-finca',
     name: 'Aves de Finca & Corral',
-    subtitle: 'Gallinas (Sedosas, Brahma, Ponedoras), Patos, Gansos y Pavos',
+    subtitle: 'Gallinas Ornamentales, Patos, Gansos y Pavos',
     category: 'aves-finca',
     icon: 'egg',
     badge: 'Salud de Población & Corral',
     image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=800&q=80',
-    description: 'Atención médica veterinaria en finca para gallinas ornamentales, ponedoras, patos y gansos. Orientación en salud poblacional, nutrición, manejo sanitario y bienestar general del lote.',
+    description: 'Atención médica veterinaria en finca para gallinas ornamentales, patos y gansos. Orientación en salud poblacional, nutrición, manejo sanitario y bienestar general.',
     commonSymptoms: [
       'Cojeras o molestias al caminar en corral',
       'Dificultad o molestia en la postura',
@@ -125,7 +125,7 @@ export const SPECIES_LIST: SpeciesInfo[] = [
   {
     id: 'exoticos',
     name: 'Exóticos',
-    subtitle: 'Erizos Africanos, Hurones y Fauna No Convencional',
+    subtitle: 'Erizos Africanos, Hurones y Pequeños Mamíferos Exóticos',
     category: 'exoticos',
     icon: 'shield_with_heart',
     badge: 'Atención Médica Especializada',
@@ -148,7 +148,7 @@ export const SPECIES_LIST: SpeciesInfo[] = [
     icon: 'pig',
     badge: 'Manejo Integral & Bienestar',
     image: 'https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=800&q=80',
-    description: 'Atención médica y manejo respetuoso para cerdos enanos en finca y hogar. Evaluación general de salud, condición corporal, asesoría en nutrición y convivencia armónica en su entorno.',
+    description: 'Atención médica y manejo respetuoso para cerdos enanos en finca y hogar. Evaluación general de salud, condición corporal, asesoría en nutrición, vacunación y convivencia armónica en su entorno.',
     commonSymptoms: [
       'Cambios en la marcha o postura al levantarse',
       'Molestias en la piel o rascado habitual',
@@ -169,63 +169,62 @@ export const SERVICES_LIST: ServiceInfo[] = [
     icon: 'consulta-preventiva',
     highlights: [
       'Revisión clínica integral',
-      'Análisis de dieta, humedad, sustrato y temperatura',
-      'Pesaje digital',
-      'Recetario y plan de cuidados por escrito'
+      'Análisis de dieta',
+      'Pesaje',
+      'Recetario y plan de cuidados'
     ],
     recommendedFor: 'Revisión anual, nuevos integrantes o cambios de comportamiento.'
   },
   {
     id: 'sueroterapia-homeopatica',
     title: 'Sueroterapia Homeopática',
-    shortDesc: 'Fluidoterapia y rehidratación con bioterapias biorreguladoras para desintoxicación celular, recuperación gastrointestinal y soporte inmunológico.',
+    shortDesc: 'Fluidoterapia y rehidratación con terapias biorreguladoras para desintoxicación celular, recuperación y soporte inmunológico.',
     fullDesc: 'Aplicación de sueros y soluciones de rehidratación enriquecidas con medicamentos homeopáticos biorreguladores. Promueve la desintoxicación, estimula el sistema inmune, alivia la inflamación y favorece la rápida recuperación sin sobrecargar sus órganos.',
     icon: 'sueroterapia-homeopatica',
     highlights: [
       'Rehidratación in situ sin estrés de hospitalización',
       'Medicamentos homeopáticos biorreguladores sin efectos secundarios',
-      'Estimulación del sistema inmunológico y drenaje toxémico',
-      'Soporte vital en estasis digestiva, decaimiento e infecciones'
+      'Estimulación del sistema inmunológico',
+      'Manejo antizootóxico integral'
     ],
     recommendedFor: 'Mascotas deshidratadas, inapetentes, en recuperación o con procesos crónicos.'
   },
   {
     id: 'terapia-respiratoria',
     title: 'Nebulizaciones y Terapias Respiratorias',
-    shortDesc: 'Tratamientos inhalados y aerosolterapia con cámara espaciadora adaptada para afecciones respiratorias en aves, conejos y pequeños mamíferos.',
-    fullDesc: 'Administración directa de mucolíticos, broncodilatadores y medicamentos inhalados mediante cámara espaciadora y nebulizador portátil adaptado en la comodidad de su espacio.',
+    shortDesc: 'Tratamientos inhalados para afecciones respiratorias en exóticos y mascotas no convencionales.',
+    fullDesc: 'Administración directa de medicamentos inhalados mediante nebulizador portátil adaptado en la comodidad de su espacio.',
     icon: 'terapia-respiratoria',
     highlights: [
       'Manejo de afecciones respiratorias y coriza aviar',
       'Sesiones de nebulización amigables con cámara adaptada',
-      'Control de humedad y oxigenación',
       'Prevención de secuelas crónicas'
     ],
     recommendedFor: 'Estornudos, secreción nasal, ruidos al respirar o silbidos.'
   },
   {
     id: 'medicina-poblacional',
-    title: 'Medicina Poblacional y Parvadas',
-    shortDesc: 'Manejo sanitario integral, planes de bioseguridad, control de brotes y nutrición para aves de postura, traspatio y granja en el Oriente Antioqueño.',
-    fullDesc: 'Evaluación técnica sanitaria para fincas con gallinas ponedoras, aves de postura, traspatio u ornamentales. Control epidemiológico, planes de bioseguridad y prevención de brotes.',
+    title: 'Medicina Poblacional Para Aves Ornamentales',
+    shortDesc: 'Manejo sanitario integral, planes de bioseguridad, control de brotes y nutrición para aves ornamentales en el Oriente Antioqueño.',
+    fullDesc: 'Asesoría de manejo para fincas con aves de corral y ornamentales.',
     icon: 'medicina-poblacional',
     highlights: [
-      'Planes de vacunación de lote y bioseguridad',
-      'Toma de muestras de buche y heces para laboratorio',
-      'Asesoría en nutrición y manejo sanitario de parvada',
-      'Desparasitaciones colectivas medidas por peso'
+      'Vacunación',
+      'Toma de muestras',
+      'Asesoría en nutrición y manejo',
+      'Desparasitaciones'
     ],
-    recommendedFor: 'Fincas en La Ceja, Rionegro, El Retiro con galpones o aves de corral.'
+    recommendedFor: 'Fincas en La Ceja, Rionegro, El Retiro con aves de corral.'
   },
   {
     id: 'toma-muestras',
     title: 'Toma de Muestras & Pruebas Diagnósticas',
-    shortDesc: 'Exámenes complementarios, sexaje de aves por ADN y análisis de laboratorio a domicilio.',
-    fullDesc: 'Obtención cuidadosa de muestras biológicas en la comodidad de tu hogar o finca (sexaje aviar por ADN, análisis coprológicos, raspados y perfiles sanguíneos), procesados en laboratorios especializados.',
+    shortDesc: 'Exámenes complementarios y análisis de laboratorio a domicilio.',
+    fullDesc: 'Obtención cuidadosa de muestras en la comodidad de tu hogar o finca (coprológicos, raspados y perfiles sanguíneos), procesados en laboratorios especializados e imagenología.',
     icon: 'toma-muestras',
     highlights: [
-      'Sexaje genético de aves por ADN',
-      'Análisis coprológicos e identificación parasitaria',
+      'Ecografía y Radiografía',
+      'Análisis coprológicos',
       'Perfiles sanguíneos y citologías veterinarias',
       'Toma de muestras profesional con manejo respetuoso'
     ],

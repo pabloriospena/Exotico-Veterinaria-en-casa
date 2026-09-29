@@ -1,7 +1,7 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import App from '../App';
-import GoogleReviewsServer from '../components/GoogleReviewsServer.astro';
+import Layout from "../layouts/Layout.astro";
+import App from "../App";
+import GoogleReviewsServer from "../components/GoogleReviewsServer.astro";
 ---
 
 <Layout
@@ -9,7 +9,6 @@ import GoogleReviewsServer from '../components/GoogleReviewsServer.astro';
   description="Atención veterinaria especializada a domicilio para conejos, aves, cuyes, erizos y mini pigs en La Ceja, Rionegro, El Retiro y Oriente Antioqueño."
 >
   <App client:load />
-  
+
   <!-- Componente Astro Renderizado 100% en Servidor (SSR/SSG) para SEO -->
-  <GoogleReviewsServer />
 </Layout>

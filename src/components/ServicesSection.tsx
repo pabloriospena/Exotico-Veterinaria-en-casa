@@ -10,7 +10,6 @@ export const ServicesSection: React.FC = () => {
       {/* Banner Card */}
       <div className="rounded-3xl bg-gradient-to-br from-[#134e35] to-[#003622] text-white p-6 md:p-8 flex flex-col gap-5 shadow-lg relative overflow-hidden">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#d9e6da]/20 text-[#b4f0cd] self-start text-xs font-semibold">
-          <span className="material-symbols-outlined text-[16px]">medical_services</span>
           <span>Diagnóstico a Domicilio</span>
         </div>
 
@@ -19,7 +18,7 @@ export const ServicesSection: React.FC = () => {
             Servicios Especializados en Finca & Hogar
           </h2>
           <p className="text-xs md:text-sm text-[#f0f1f1] opacity-90 leading-relaxed">
-            Tecnología clínica avanzada transportable para diagnósticos precisos sin someter a tu mascota a viajes agotadores por carreteras o trochas.
+            Atención a domicilio sin someter a tu mascota a viajes agotadores por carreteras o trochas.
           </p>
         </div>
 

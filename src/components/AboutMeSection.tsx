@@ -40,12 +40,13 @@ export const AboutMeSection: React.FC = () => {
 
             <div className="flex flex-wrap justify-center lg:justify-start gap-2 pt-2">
               <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white text-[11px] font-medium backdrop-blur-sm border border-white/10">
-                <span className="material-symbols-outlined text-[14px] text-[#b4f0cd]">pets</span>
                 <span>Aves & Exóticos</span>
               </span>
               <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white text-[11px] font-medium backdrop-blur-sm border border-white/10">
-                <span className="material-symbols-outlined text-[14px] text-[#b4f0cd]">home_health</span>
                 <span>Atención a Domicilio</span>
+              </span>
+              <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white/10 text-white text-[11px] font-medium backdrop-blur-sm border border-white/10">
+                <span>Mascotas No Convencionales</span>
               </span>
             </div>
           </div>
@@ -63,7 +64,7 @@ export const AboutMeSection: React.FC = () => {
 
             <div className="space-y-3.5 text-xs md:text-sm leading-relaxed font-light text-gray-100">
               <p>
-                Soy <strong className="font-bold text-white">María del Mar Mejía Cano</strong>, médica veterinaria y fundadora de <strong className="font-bold text-[#b4f0cd]">Exótico – Veterinaria en casa</strong>, proyecto que nació en <strong className="font-bold text-white">2022</strong> con el propósito de ofrecer atención veterinaria a aves y mascotas no convencionales directamente en su hogar.
+                Soy <strong className="font-bold text-white">María del Mar Mejía Cano</strong>, médica veterinaria y fundadora de <strong className="font-bold text-[#b4f0cd]">Exótico – Veterinaria en casa</strong>, proyecto que nació en <strong className="font-bold text-white">2021</strong> con el propósito de ofrecer atención veterinaria a aves y mascotas no convencionales directamente en su hogar.
               </p>
 
               <p>
