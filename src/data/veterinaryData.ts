@@ -163,10 +163,10 @@ export const SPECIES_LIST: SpeciesInfo[] = [
 export const SERVICES_LIST: ServiceInfo[] = [
   {
     id: 'consulta-preventiva',
-    title: 'Consulta Preventiva & Valoración en Hábitat',
-    shortDesc: 'Nuestro servicio estrella para detectar desbalances a tiempo en tu propio hogar o finca.',
+    title: 'Consulta Preventiva y Chequeo de Hábitat',
+    shortDesc: 'Valoración médica integral de bienestar, nutrición adecuada, enriquecimiento ambiental y manejo de estrés sin traslados.',
     fullDesc: 'Evaluamos minuciosamente al paciente en su entorno habitual sin provocarle estrés de viaje. Revisamos dieta, recinto, signos vitales, pesaje de precisión y examen clínico completo.',
-    icon: 'stethoscope',
+    icon: 'consulta-preventiva',
     highlights: [
       'Revisión clínica integral',
       'Análisis de dieta, humedad, sustrato y temperatura',
@@ -178,9 +178,9 @@ export const SERVICES_LIST: ServiceInfo[] = [
   {
     id: 'sueroterapia-homeopatica',
     title: 'Sueroterapia Homeopática',
-    shortDesc: 'Fluidoterapia biorreguladora e hidratación especializada in situ para recuperación profunda.',
-    fullDesc: 'Aplicación de sueros y soluciones de rehidratación enriquecidas con medicamentos homeopáticos biorreguladores. Promueve la desintoxicación, estimula el sistema inmune, alivia la inflamación y favorece la rápida recuperación en conejos, aves, cuyes y exóticos sin sobrecargar sus órganos.',
-    icon: 'water_drop',
+    shortDesc: 'Fluidoterapia y rehidratación con bioterapias biorreguladoras para desintoxicación celular, recuperación gastrointestinal y soporte inmunológico.',
+    fullDesc: 'Aplicación de sueros y soluciones de rehidratación enriquecidas con medicamentos homeopáticos biorreguladores. Promueve la desintoxicación, estimula el sistema inmune, alivia la inflamación y favorece la rápida recuperación sin sobrecargar sus órganos.',
+    icon: 'sueroterapia-homeopatica',
     highlights: [
       'Rehidratación in situ sin estrés de hospitalización',
       'Medicamentos homeopáticos biorreguladores sin efectos secundarios',
@@ -191,13 +191,13 @@ export const SERVICES_LIST: ServiceInfo[] = [
   },
   {
     id: 'terapia-respiratoria',
-    title: 'Nebulizaciones & Terapia Respiratoria',
-    shortDesc: 'Tratamientos in situ para cuadros pulmonares, sinusales y traqueales.',
-    fullDesc: 'Administración directa de mucolíticos, broncodilatadores y antibióticos mediante cámara de nebulización portátil en la comodidad de su jaula o habitáculo.',
-    icon: 'air',
+    title: 'Nebulizaciones y Terapias Respiratorias',
+    shortDesc: 'Tratamientos inhalados y aerosolterapia con cámara espaciadora adaptada para afecciones respiratorias en aves, conejos y pequeños mamíferos.',
+    fullDesc: 'Administración directa de mucolíticos, broncodilatadores y medicamentos inhalados mediante cámara espaciadora y nebulizador portátil adaptado en la comodidad de su espacio.',
+    icon: 'terapia-respiratoria',
     highlights: [
-      'Manejo de neumonías y coriza aviar',
-      'Sesiones de nebulización amigables',
+      'Manejo de afecciones respiratorias y coriza aviar',
+      'Sesiones de nebulización amigables con cámara adaptada',
       'Control de humedad y oxigenación',
       'Prevención de secuelas crónicas'
     ],
@@ -205,14 +205,14 @@ export const SERVICES_LIST: ServiceInfo[] = [
   },
   {
     id: 'medicina-poblacional',
-    title: 'Medicina Poblacional Aviar & Fincas',
-    shortDesc: 'Inspección sanitaria de criaderos, galpones y lotes de aves ornamentales.',
-    fullDesc: 'Evaluación técnica sanitaria para fincas con gallinas ponedoras, aves ornamentales o de exhibición. Control epidemiológico y prevención de brotes.',
-    icon: 'groups',
+    title: 'Medicina Poblacional y Parvadas',
+    shortDesc: 'Manejo sanitario integral, planes de bioseguridad, control de brotes y nutrición para aves de postura, traspatio y granja en el Oriente Antioqueño.',
+    fullDesc: 'Evaluación técnica sanitaria para fincas con gallinas ponedoras, aves de postura, traspatio u ornamentales. Control epidemiológico, planes de bioseguridad y prevención de brotes.',
+    icon: 'medicina-poblacional',
     highlights: [
-      'Planes de vacunación de lote (Newcastle, Viruela)',
+      'Planes de vacunación de lote y bioseguridad',
       'Toma de muestras de buche y heces para laboratorio',
-      'Asesoría de Bioseguridad y control de parásitos',
+      'Asesoría en nutrición y manejo sanitario de parvada',
       'Desparasitaciones colectivas medidas por peso'
     ],
     recommendedFor: 'Fincas en La Ceja, Rionegro, El Retiro con galpones o aves de corral.'
@@ -221,8 +221,8 @@ export const SERVICES_LIST: ServiceInfo[] = [
     id: 'toma-muestras',
     title: 'Toma de Muestras & Pruebas Diagnósticas',
     shortDesc: 'Exámenes complementarios, sexaje de aves por ADN y análisis de laboratorio a domicilio.',
-    fullDesc: 'Obtención cuidadosa de muestras biológicas en la comodidad de tu hogar o finca (sexaje aviar por ADN, análisis coprológicos, raspados y perfiles sanguíneos), procesados en laboratorios especializados para un diagnóstico preciso sin desplazar al paciente.',
-    icon: 'science',
+    fullDesc: 'Obtención cuidadosa de muestras biológicas en la comodidad de tu hogar o finca (sexaje aviar por ADN, análisis coprológicos, raspados y perfiles sanguíneos), procesados en laboratorios especializados.',
+    icon: 'toma-muestras',
     highlights: [
       'Sexaje genético de aves por ADN',
       'Análisis coprológicos e identificación parasitaria',

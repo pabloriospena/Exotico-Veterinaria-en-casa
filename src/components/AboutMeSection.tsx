@@ -25,7 +25,7 @@ export const AboutMeSection: React.FC = () => {
               </div>
               <div className="absolute -bottom-2 -right-2 bg-[#7c2800] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg border-2 border-white flex items-center gap-1">
                 <span className="material-symbols-outlined text-[14px]">verified</span>
-                <span>más de 5 años de experiencia</span>
+                <span> + 5 años de experiencia </span>
               </div>
             </div>
 

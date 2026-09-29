@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { SERVICES_LIST, ServiceInfo } from '../data/veterinaryData';
+import { CustomIcon } from './CustomIcon';
 
 export const ServicesSection: React.FC = () => {
   const [selectedService, setSelectedService] = useState<ServiceInfo | null>(null);
@@ -30,8 +31,8 @@ export const ServicesSection: React.FC = () => {
               onClick={() => setSelectedService(srv)}
               className="bg-white/10 hover:bg-white/20 p-4 rounded-2xl border border-white/15 backdrop-blur-md cursor-pointer transition-all flex items-start gap-3.5 group"
             >
-              <div className="w-10 h-10 rounded-xl bg-[#b4f0cd] text-[#003622] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
-                <span className="material-symbols-outlined text-[22px]">{srv.icon}</span>
+              <div className="w-12 h-12 rounded-xl shrink-0 group-hover:scale-105 transition-transform">
+                <CustomIcon name={srv.id} className="w-12 h-12" title={srv.title} />
               </div>
               <div className="flex-1">
                 <h3 className="text-sm font-bold text-white group-hover:text-[#b4f0cd] transition-colors">
@@ -67,9 +68,9 @@ export const ServicesSection: React.FC = () => {
           <div className="bg-white w-full max-w-md rounded-3xl p-6 shadow-2xl border border-gray-200 space-y-4 animate-in fade-in duration-200">
             <div className="flex items-center justify-between pb-2 border-b">
               <div className="flex items-center gap-2.5">
-                <span className="w-9 h-9 rounded-xl bg-[#d9e6da] text-[#003622] flex items-center justify-center">
-                  <span className="material-symbols-outlined text-[20px]">{selectedService.icon}</span>
-                </span>
+                <div className="w-10 h-10 rounded-xl shrink-0 flex items-center justify-center">
+                  <CustomIcon name={selectedService.id} className="w-10 h-10" title={selectedService.title} />
+                </div>
                 <h3 className="text-base font-bold text-[#003622]">{selectedService.title}</h3>
               </div>
               <button

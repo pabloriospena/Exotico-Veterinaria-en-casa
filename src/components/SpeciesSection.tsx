@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { SPECIES_LIST, SpeciesInfo } from '../data/veterinaryData';
+import { CustomIcon } from './CustomIcon';
 
 export const SpeciesSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState<string>('todos');
@@ -57,13 +58,9 @@ export const SpeciesSection: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2.5">
-                  <span className="w-10 h-10 rounded-full bg-[#d9e6da] flex items-center justify-center text-[#003622]">
-                    {sp.icon === 'pig' ? (
-                      <span className="text-xl" role="img" aria-label="Minipig">🐷</span>
-                    ) : (
-                      <span className="material-symbols-outlined text-[22px]">{sp.icon}</span>
-                    )}
-                  </span>
+                  <div className="w-12 h-12 rounded-xl shrink-0 flex items-center justify-center">
+                    <CustomIcon name={sp.id} className="w-12 h-12" title={sp.name} />
+                  </div>
                   <div>
                     <h3 className="text-base font-bold text-[#003622] leading-snug">{sp.name}</h3>
                     <span className="text-[11px] text-[#404943] block leading-tight">{sp.subtitle}</span>
