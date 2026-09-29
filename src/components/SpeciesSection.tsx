@@ -77,22 +77,7 @@ export const SpeciesSection: React.FC = () => {
 
               <p className="text-xs text-[#404943] leading-relaxed">{sp.description}</p>
 
-              {/* Procedures Highlight */}
-              <div className="space-y-1.5 pt-2 border-t border-gray-100">
-                <span className="text-[11px] font-bold text-[#003622] uppercase tracking-wider block">
-                  Procedimientos comunes:
-                </span>
-                <ul className="space-y-1 text-xs text-[#404943]">
-                  {sp.procedures.map((p, idx) => (
-                    <li key={idx} className="flex items-start gap-1.5">
-                      <span className="material-symbols-outlined text-[#134e35] text-[14px] mt-0.5 shrink-0">
-                        check
-                      </span>
-                      <span>{p}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+
 
               {/* Care Tip Box */}
               <div className="bg-[#f3f3f3] p-3 rounded-2xl border border-gray-200 text-[11px] text-[#404943]">

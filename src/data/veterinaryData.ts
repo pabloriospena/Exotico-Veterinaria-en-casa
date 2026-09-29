@@ -56,45 +56,35 @@ export const SPECIES_LIST: SpeciesInfo[] = [
     subtitle: 'Lagomorfos / Pequeños Mamíferos',
     category: 'pequeños-mamiferos',
     icon: 'cruelty_free',
-    badge: 'Manejo Fear-Free para Presas',
+    badge: 'Atención & Medicina Preventiva',
     image: 'https://images.unsplash.com/photo-1585110396000-c9ffd4e4b308?auto=format&fit=crop&w=800&q=80',
-    description: 'Atención especializada en conejos domésticos. Revisión de dentición (incisivos/molares), palpación abdominal por estasis digestiva, limpieza de glándulas y prevención de pododermatitis.',
+    description: 'Atención médica general especializada para conejos domésticos. Examen físico completo, valoración de condición corporal, asesoría en nutrición equilibrada y prevención digestiva en su hogar.',
     commonSymptoms: [
-      'Dejó de comer heno (>6 horas es urgencia)',
-      'Heces pequeñas, duras, unidas con pelo o ausentes',
-      'Rechina los dientes con dolor o postura encorvada',
-      'Sacos perineales sucios o cecotrofos pegados'
+      'Inapetencia o cambios en la ingesta de alimentos',
+      'Cambio en el tamaño o consistencia de heces',
+      'Posturas de incomodidad o baja actividad',
+      'Revisión preventiva de rutinas de salud'
     ],
-    procedures: [
-      'Limado y desgaste de incisivos y molares con Dremel',
-      'Protocolos de rehidratación y motilidad digestiva',
-      'Cuidado dermatológico y corte seguro de uñas',
-      'Asesoría nutricional basada 80% en heno'
-    ],
-    careTip: 'El heno es el motor de su digestión y desgaste dental continuo. Si un conejo pasa más de 12 horas sin comer heno, su flora cecal entra en riesgo grave.'
+    procedures: [],
+    careTip: 'El heno constante es fundamental para la salud digestiva y dental de tu conejo. Una revisión preventiva periódica asegura su bienestar integral.'
   },
   {
     id: 'roedores',
     name: 'Roedores',
-    subtitle: 'Cobayos (Cuyes como Punky), Hámsters, Chinchillas y Ratas',
+    subtitle: 'Cobayos (Cuyes), Hámsters, Chinchillas y Ratas',
     category: 'roedores',
     icon: 'pets',
-    badge: 'Cuidado Odontológico & Digestivo',
+    badge: 'Consulta & Salud Digestiva',
     image: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?auto=format&fit=crop&w=800&q=80',
-    description: 'Evaluación de cobayos (cuyes), hámsters, chinchillas y ratas domésticas. Detección de sobrecrecimiento molar, cálculos vesicales, deficiencia de vitamina C (en cobayos) y respiración agitada.',
+    description: 'Medicina general especializada para cobayos (cuyes), hámsters, chinchillas y ratas. Evaluación clínica integral, asesoría nutricional, prevención digestiva y orientación para su cuidado diario.',
     commonSymptoms: [
-      'Dejó de comer o masticar balanceado/fresco',
-      'Salivación excesiva o babero mojado (problema dental)',
-      'Dificultad para orinar o sangre en la orina (cobayos)',
-      'Ruidos respiratorios, estornudos o apatía'
+      'Disminución del apetito o ingesta de alimento fresco',
+      'Salivación o humedad recurrente alrededor de la boca',
+      'Cambios de conducta o menor interacción',
+      'Monitoreo general de peso y condición física'
     ],
-    procedures: [
-      'Higiene perineal y desobstrucción de sacos en cuyes',
-      'Corte y alineación técnica molar/incisiva',
-      'Suplementación clínica de Vitamina C y fluidoterapia',
-      'Evaluación clínica de vejiga y tracto urinario'
-    ],
-    careTip: 'Los cobayos (cuyes) no sintetizan vitamina C por sí mismos. Necesitan aporte diario en su dieta fresca o suplementación recomendada por el especialista.'
+    procedures: [],
+    careTip: 'Los cobayos requieren aporte diario de vitamina C fresca en su alimentación. La prevención es la mejor herramienta para mantenerlos sanos.'
   },
   {
     id: 'aves-compania',
@@ -102,91 +92,71 @@ export const SPECIES_LIST: SpeciesInfo[] = [
     subtitle: 'Ninfas, Agapornis, Periquitos, Loros, Canarios y Cacatúas',
     category: 'aves-compania',
     icon: 'flutter',
-    badge: 'Sexaje ADN & Medicina Aviar',
+    badge: 'Medicina & Bienestar Aviar',
     image: 'https://images.unsplash.com/photo-1552728089-57bdde30beb3?auto=format&fit=crop&w=800&q=80',
-    description: 'Medicina preventiva y curativa para psitácidos y passeriformes en el hogar. Arreglo funcional de picos, sexaje genético por ADN, control de picaje, buche y problemas respiratorios.',
+    description: 'Medicina general especializada para aves de compañía. Chequeo preventivo de plumaje, examen físico general, asesoría en nutrición equilibrada y orientación en enriquecimiento ambiental.',
     commonSymptoms: [
-      'Plumas erizadas y permanece embolado en el piso',
-      'Secreción nasal, estornudos o boqueo al respirar',
-      'Pico deformado que le impide comer',
-      'Buche blando lleno de fluido o impactado'
+      'Plumas erizadas o postura decaída',
+      'Cambios en la vocalización o actividad normal',
+      'Dificultad o esfuerzo inusual al alimentarse',
+      'Evaluación médica general y sexaje'
     ],
-    procedures: [
-      'Corte y limado estético/funcional de picos y uñas con Dremel',
-      'Sexaje genético certero por ADN (pluma o sangre)',
-      'Lavado/sondeo de buche y nebulizaciones',
-      'Examen coprológico directo para parásitos'
-    ],
-    careTip: 'Las aves ocultan la enfermedad por instinto. Cuando notas que una ninfa o agapornis está embolado o decaído, suele llevar días sintiéndose mal.'
+    procedures: [],
+    careTip: 'Las aves suelen disimular signos iniciales de malestar. Ante cualquier cambio de comportamiento, una valoración oportuna es clave.'
   },
   {
     id: 'aves-finca',
     name: 'Aves de Finca & Corral',
-    subtitle: 'Gallinas (Sedosas, Brahma, Ponedoras), Patos (como Ramón), Gansos y Pavos',
+    subtitle: 'Gallinas (Sedosas, Brahma, Ponedoras), Patos, Gansos y Pavos',
     category: 'aves-finca',
     icon: 'egg',
-    badge: 'Medicina Poblacional & Corral',
+    badge: 'Salud de Población & Corral',
     image: 'https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=800&q=80',
-    description: 'Atención integral en fincas para gallinas ornamentales, ponedoras, patos y gansos. Tratamiento de pododermatitis (bumblefoot), retención de huevo, vacunas de lote y cortes de pico.',
+    description: 'Atención médica veterinaria en finca para gallinas ornamentales, ponedoras, patos y gansos. Orientación en salud poblacional, nutrición, manejo sanitario y bienestar general del lote.',
     commonSymptoms: [
-      'Cojera o inflamación con pus en la planta de la pata (pododermatitis)',
-      'Abdomen abultado o postura de pingüino (retención de huevo)',
-      'Secreción ocular/nasal o moquillo aviar',
-      'Heridas por ataques de depredadores o peleas'
+      'Cojeras o molestias al caminar en corral',
+      'Dificultad o molestia en la postura',
+      'Cambios en el plumaje o aspecto general',
+      'Inapetencia o aislamiento del resto del grupo'
     ],
-    procedures: [
-      'Tratamiento de pododermatitis y curación de heridas',
-      'Planes de vacunación preventiva (Newcastle, Viruela aviar)',
-      'Desparasitación interna/externa de lote',
-      'Atención de emergencias reproductivas'
-    ],
-    careTip: 'En patos y gallinas, la humedad constante en los corrales favorece bacterias en las patas. Un suelo seco con virita o pasto previene bumblefoot doloroso.'
+    procedures: [],
+    careTip: 'Mantener un suelo seco y limpio en corrales ayuda a conservar la salud de las patas y previene molestias infecciosas.'
   },
   {
     id: 'exoticos',
     name: 'Exóticos',
-    subtitle: 'Erizos Africanos (como Alma), Hurones y Fauna No Convencional',
+    subtitle: 'Erizos Africanos, Hurones y Fauna No Convencional',
     category: 'exoticos',
-    icon: 'pets',
-    badge: 'Cuidados Especializados de Especie',
+    icon: 'shield_with_heart',
+    badge: 'Atención Médica Especializada',
     image: 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=800&q=80',
-    description: 'Atención médica y dermatológica para erizos africanos, hurones y otros pequeños mamíferos exóticos. Evaluación de piel y púas, ácaros, nutrición específica y revisión cardiopulmonar.',
+    description: 'Medicina general especializada para erizos africanos, hurones y pequeños mamíferos exóticos. Examen físico detallado, evaluación de piel, nutrición específica y recomendaciones de ambiente.',
     commonSymptoms: [
-      'Pérdida excesiva de púas, costras o resequedad (erizos)',
-      'Soplos cardíacos, decaimiento o diarreas (hurones)',
-      'Apatía, falta de apetito o bultos cutáneos',
-      'Orejas deshilachadas o rascado intenso'
+      'Cambios en el manto o piel (púas o pelaje)',
+      'Apatía o menor movilidad en su hábitat',
+      'Variaciones en hábitos alimenticios o ingesta de agua',
+      'Chequeo médico de rutina'
     ],
-    procedures: [
-      'Raspado cutáneo e identificación de ácaros bajo microscopio',
-      'Examen clínico especializado de erizos y hurones',
-      'Planes antiparasitarios y nutrición adaptada',
-      'Asesoría de temperatura y habitáculo'
-    ],
-    careTip: 'Los erizos africanos no toleran las bajas temperaturas. En el clima frío del Oriente Antioqueño requieren placa térmica o calefacción constante para no entrar en hibernación peligrosa.'
+    procedures: [],
+    careTip: 'Los erizos africanos necesitan mantener un ambiente cálido constante para prevenir estados de aletargamiento en zonas frías.'
   },
   {
     id: 'minipigs',
     name: 'Minipigs',
-    subtitle: 'Mini Pigs de Finca & Hogar (como Toreto)',
+    subtitle: 'Mini Pigs de Finca & Hogar',
     category: 'minipigs',
     icon: 'pig',
-    badge: 'Pedicura & Conducta en Corral',
+    badge: 'Manejo Integral & Bienestar',
     image: 'https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&w=800&q=80',
-    description: 'Atención especializada para cerdos enanos en fincas y casas campestres. Recorte técnico de pezuñas con Dremel y refuerzo positivo en su propio corral sin contención violenta ni sedación innecesaria.',
+    description: 'Atención médica y manejo respetuoso para cerdos enanos en finca y hogar. Evaluación general de salud, condición corporal, asesoría en nutrición y convivencia armónica en su entorno.',
     commonSymptoms: [
-      'Pezuñas sobrecrecidas o deformes que causan dolor/cojera',
-      'Sobrepeso o rigidez articular al levantarse',
-      'Problemas de piel, parásitos externos o rasquido',
-      'Cambios de conducta o agresividad por malestar'
+      'Cambios en la marcha o postura al levantarse',
+      'Molestias en la piel o rascado habitual',
+      'Sensibilidad al tacto o cambios de ánimo',
+      'Valoración médica de rutina en su espacio'
     ],
-    procedures: [
-      'Pedicura técnica con Dremel para minipigs en su corral',
-      'Planes desparasitantes y control sanitario',
-      'Examen físico general e inspección articular',
-      'Asesoría de etología y refuerzo positivo'
-    ],
-    careTip: 'El sobrecrecimiento de pezuñas en minipigs afecta la pisada y genera problemas articulares en la columna. Mantener el arreglo periódico evita cojeras permanentes.'
+    procedures: [],
+    careTip: 'Un entorno adecuado y una nutrición balanceada son esenciales para mantener una buena condición corporal y salud articular en minipigs.'
   }
 ];
 
@@ -220,20 +190,6 @@ export const SERVICES_LIST: ServiceInfo[] = [
     recommendedFor: 'Mascotas deshidratadas, inapetentes, en recuperación o con procesos crónicos.'
   },
   {
-    id: 'odontologia-aviar-roedor',
-    title: 'Corte & Limado Técnico con Dremel',
-    shortDesc: 'Alineación dental y arreglo seguro de picos, uñas, espolones y pezuñas.',
-    fullDesc: 'Uso de micromotores y discos de diamante especiales para rebajar con precisión picos sobrecrecidos en aves y pezuñas en mini pigs o gansos.',
-    icon: 'content_cut',
-    highlights: [
-      'Rebajado dental de incisivos en conejos y cuyes',
-      'Corrección de picos cruzados o deformes en ninfas y gallinas',
-      'Despuntado de pezuñas en mini pigs en su corral',
-      'Sin sedación innecesaria gracias a contención amigable'
-    ],
-    recommendedFor: 'Dificultad para comer, picos chuecos o pezuñas largas.'
-  },
-  {
     id: 'terapia-respiratoria',
     title: 'Nebulizaciones & Terapia Respiratoria',
     shortDesc: 'Tratamientos in situ para cuadros pulmonares, sinusales y traqueales.',
@@ -262,18 +218,18 @@ export const SERVICES_LIST: ServiceInfo[] = [
     recommendedFor: 'Fincas en La Ceja, Rionegro, El Retiro con galpones o aves de corral.'
   },
   {
-    id: 'sexaje',
-    title: 'Sexaje & Laboratorio Clínico',
-    shortDesc: 'Identificación genético-reproductiva de aves y exámenes complementarios.',
-    fullDesc: 'Toma de muestra de plumas o gota de sangre para determinar el sexo genético de aves monomórficas (agapornis, ninfas, loros) con certificado de laboratorio.',
+    id: 'toma-muestras',
+    title: 'Toma de Muestras & Pruebas Diagnósticas',
+    shortDesc: 'Exámenes complementarios, sexaje de aves por ADN y análisis de laboratorio a domicilio.',
+    fullDesc: 'Obtención cuidadosa de muestras biológicas en la comodidad de tu hogar o finca (sexaje aviar por ADN, análisis coprológicos, raspados y perfiles sanguíneos), procesados en laboratorios especializados para un diagnóstico preciso sin desplazar al paciente.',
     icon: 'science',
     highlights: [
-      'Sexaje',
-      'Coprológicos e identificación de parásitos en heces',
-      'Hemogramas y citologías aviarias/mamíferas',
-      'Toma de muestra sin dolor'
+      'Sexaje genético de aves por ADN',
+      'Análisis coprológicos e identificación parasitaria',
+      'Perfiles sanguíneos y citologías veterinarias',
+      'Toma de muestras profesional con manejo respetuoso'
     ],
-    recommendedFor: 'Nuevas aves de cría o confirmación de especie.'
+    recommendedFor: 'Evaluación preventiva de salud, diagnóstico preciso o sexaje de aves.'
   }
 ];
 
