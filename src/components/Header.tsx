@@ -53,7 +53,10 @@ export const Header: React.FC<HeaderProps> = ({
             <img
               alt="Logo Exótico - Veterinaria en casa"
               className="w-10 h-10 md:w-11 md:h-11 rounded-full object-cover shadow-[0_2px_10px_-2px_rgba(19,78,53,0.3)] border-2 border-[#b4f0cd] group-hover:scale-105 transition-transform"
-              src="https://lh3.googleusercontent.com/aida/AEtjO1UWKwwNLIPxSgfzH1AGEUd-pmMgnTKV650mOutXR_qC7O9gH7bFre5W-RWGKX1BvIqFfpYlxiXAJUacZKGBovwBexsgvoTEktKucQw_GPHr6OHYhjActatK3YtVrDTLDkUAI7ThpCxAKvy7mtLhACgh7DItLs7Okcjst1MVF8aCJuzAY7QU5nsjIslgk6-JcGc3TslIGxg40nkTRZWRnzAKBZvk8porwPssDbAQTvgbwS9chAkAmqWNbu0GWdL4KuwpQQ07WOvKEA"
+              src="/favicon.png"
+              onError={(e) => {
+                e.currentTarget.src = "https://lh3.googleusercontent.com/aida/AEtjO1UWKwwNLIPxSgfzH1AGEUd-pmMgnTKV650mOutXR_qC7O9gH7bFre5W-RWGKX1BvIqFfpYlxiXAJUacZKGBovwBexsgvoTEktKucQw_GPHr6OHYhjActatK3YtVrDTLDkUAI7ThpCxAKvy7mtLhACgh7DItLs7Okcjst1MVF8aCJuzAY7QU5nsjIslgk6-JcGc3TslIGxg40nkTRZWRnzAKBZvk8porwPssDbAQTvgbwS9chAkAmqWNbu0GWdL4KuwpQQ07WOvKEA";
+              }}
             />
             <div className="flex flex-col">
               <span className="text-[11px] font-bold text-[#134e35] tracking-wider uppercase flex items-center gap-1">
